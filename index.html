@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>원고 합평 워크숍 · 글로컬 AI 디지털북 프로젝트</title>
+<meta name="description" content="책 원고를 쓰는 교사들의 합평 워크숍 활동지. 점수를 매기지 않고, 읽은 사람이 본 것과 이끄는 질문을 건네며, 받은 질문에는 글로 답합니다.">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#173941">
+<meta property="og:title" content="원고 합평 워크숍 · 글로컬 AI 디지털북 프로젝트">
+<meta property="og:description" content="질문으로 고쳐 쓰기 — 본 것을 말하고, 이끄는 질문을 건네고, 글로 답합니다.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="workshop.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23e7e9e3'/><text y='23' x='4' font-size='16' font-family='sans-serif' font-weight='800' fill='%2317469e'>問</text></svg>">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="topbar__brand" href="#p0" aria-label="활동지 맨 위로">
+    <span class="topbar__symbol" aria-hidden="true">問</span>
+    <span class="topbar__mark">원고 합평 워크숍<span class="topbar__mark-x"> <em>·</em> 글로컬 AI 디지털북</span></span>
+  </a>
+  <span class="topbar__sub">일반 창에서는 자동 저장됩니다 · 시크릿·공용 기기는 창을 닫으면 사라집니다 · 1~3일차 활동지와 섞이지 않습니다</span>
+  <span class="topbar__spacer"></span>
+  <span class="saved" id="saved">저장됨</span>
+  <div class="topbar__tools no-print">
+    <button class="btn" id="btn-print" type="button">인쇄 · PDF</button>
+    <button class="btn" id="btn-export" type="button">텍스트로 내보내기</button>
+    <button class="btn btn--quiet" id="btn-reset" type="button">전체 지우기</button>
+  </div>
+</header>
+
+<nav class="rail no-print" aria-label="챕터 이동">
+  <ul class="rail__list">
+    <li class="rail__item" data-for="p0"><a class="rail__link" href="#p0"><span class="rail__n">0</span>약속</a><span class="rail__bar" data-for="p0"><i></i></span></li>
+    <li class="rail__item" data-for="p1"><a class="rail__link" href="#p1"><span class="rail__n">1</span>질문 연습</a><span class="rail__bar" data-for="p1"><i></i></span></li>
+    <li class="rail__item" data-for="p2" data-track="a"><a class="rail__link" href="#p2"><span class="rail__n">2</span>합평 원</a><span class="rail__bar" data-for="p2"><i></i></span></li>
+    <li class="rail__item" data-for="p3" data-track="b"><a class="rail__link" href="#p3"><span class="rail__n">3</span>질문 사다리</a><span class="rail__bar" data-for="p3"><i></i></span></li>
+    <li class="rail__item" data-for="p4"><a class="rail__link" href="#p4"><span class="rail__n">4</span>글로 답하기</a><span class="rail__bar" data-for="p4"><i></i></span></li>
+    <li class="rail__item" data-for="p5"><a class="rail__link" href="#p5"><span class="rail__n">5</span>마무리</a><span class="rail__bar" data-for="p5"><i></i></span></li>
+  </ul>
+</nav>
+
+<main class="page">
+
+<!-- ══════════════════ 앞장 ══════════════════ -->
+<section id="p0" data-part>
+<div class="cover cover--hero">
+  <img class="cover__image" src="img/workshop-hero.webp"
+       alt="늦은 오후 햇살이 드는 방. 왼쪽은 나뭇잎 그림자가 진 빈 벽이고, 오른쪽 둥근 나무 탁자에 다섯 사람이 둘러앉아 있다. 얼굴은 보이지 않고 손만 보인다. 탁자 위에는 여백에 작은 물음표가 그려진 원고 다섯 장과 찻잔, 연필꽂이, 접어 둔 종이 카드 몇 장이 놓여 있고, 한 사람은 원고 위에 연필을 대고 있다."
+       width="1672" height="941" fetchpriority="high">
+  <div class="cover__shade" aria-hidden="true"></div>
+  <div class="cover__content">
+    <p class="cover__eyebrow">GLOCAL AI DIGITAL BOOK · MANUSCRIPT WORKSHOP</p>
+    <h1 class="cover__title"><span>질문으로</span><br>고쳐 쓰기</h1>
+    <p class="cover__lede">오늘은 글에 점수를 매기지 않습니다. 읽은 사람은 <b>본 것</b>을 말하고, 쓴 사람이 더 쓰고 싶어지는 <b>질문</b>을 건넵니다. 받은 질문에는 말 대신 <b>글로</b> 답합니다.</p>
+    <div class="cover__actions no-print">
+      <a class="cover__cta" href="#c-promise">약속부터 읽기 <span aria-hidden="true">→</span></a>
+      <span class="cover__feature">자동 저장 · 인쇄 지원</span>
+    </div>
+    <div class="cover__meta">
+      <span>강남서초교육지원청</span><span>독서교육 교사지원단</span><span>강사 이대형 · 미림마이스터고</span>
+    </div>
+  </div>
+  <p class="cover__caption">글로컬 AI 디지털북 · 원고 합평 워크숍</p>
+</div>
+
+<nav class="journey no-print" aria-label="오늘의 활동 순서">
+  <a href="#p0"><b>0</b><span>약속</span></a>
+  <a href="#p1"><b>1</b><span>질문 연습</span></a>
+  <a href="#p2"><b>2 · A</b><span>합평 원</span></a>
+  <a href="#p3"><b>3 · B</b><span>질문 사다리</span></a>
+  <a href="#p4"><b>4</b><span>글로 답하기</span></a>
+  <a href="#p5"><b>5</b><span>마무리</span></a>
+</nav>
+
+<h3 class="h">오늘의 길</h3>
+<div class="flow" aria-label="함께 시작해 두 자리로 나뉘었다가 다시 모입니다">
+  <div class="flow__col"><b>함께</b><span>0 약속 · 1 질문 연습</span></div>
+  <div class="flow__split">
+    <div class="flow__col flow__col--a"><b>A · 원고를 낸 분</b><span>2 합평 원</span></div>
+    <div class="flow__col flow__col--b"><b>B · 아직 쓰는 분</b><span>3 질문 사다리</span></div>
+  </div>
+  <div class="flow__col"><b>다시 함께</b><span>4 글로 답하기 · 5 마무리</span></div>
+</div>
+
+<h3 class="h" id="c-promise">오늘의 약속 다섯 가지</h3>
+<ol class="promise">
+  <li><b>순서를 지킵니다.</b> 본 것 → 질문 → 의견. 의견은 쓴 사람이 듣겠다고 할 때만 말합니다.</li>
+  <li><b>도움받을 곳은 쓴 사람이 정합니다.</b> 읽는 사람의 질문은 그 자리를 향합니다.</li>
+  <li><b>글 속의 「나」는 「화자」라고 부릅니다.</b> "많이 지치셨군요"가 아니라 "화자가 문 앞에서 멈췄을 때"라고 말합니다.</li>
+  <li><b>받은 질문에는 글로 답합니다.</b> 말로 한 답은 사라지고, 쓴 답은 원고에 남습니다.</li>
+  <li><b>여기서 나눈 이야기는 여기에 둡니다.</b></li>
+</ol>
+<p class="spec">합평은 글을 평가하는 자리가 아닙니다. <span class="key">쓴 사람이 자리에서 일어날 때 빨리 다시 쓰고 싶어지면</span> 잘된 합평입니다.</p>
+
+<h3 class="h">내 자리 고르기</h3>
+<p>원고를 이미 냈는지에 따라 가는 길이 둘로 나뉩니다. 챕터 1과 4·5는 모두 함께 합니다.</p>
+<div class="track-pick" role="radiogroup" aria-label="내 자리">
+  <label class="track-card">
+    <input type="radio" name="track" value="a" data-k="me/track-a">
+    <span class="track-card__t">A · 원고를 냈습니다</span>
+    <span class="track-card__d">다섯 명이 둘러앉아 한 사람씩 합평을 받습니다. <b>챕터 2 · 합평 원</b>으로 갑니다.</span>
+  </label>
+  <label class="track-card">
+    <input type="radio" name="track" value="b" data-k="me/track-b">
+    <span class="track-card__t">B · 아직 쓰는 중입니다</span>
+    <span class="track-card__d">짝과 서로 질문하며 초안을 만듭니다. 쓰다 멈춘 원고도 여기입니다. <b>챕터 3 · 질문 사다리</b>로 갑니다.</span>
+  </label>
+</div>
+
+<div class="field">
+  <label class="field__label" for="f-name">이름</label>
+  <div class="line"><input class="ink" type="text" id="f-name" data-k="me/name" placeholder="예) 김서초"></div>
+</div>
+<div class="field">
+  <label class="field__label" for="f-title">원고 제목 (임시도 괜찮습니다)</label>
+  <div class="line"><input class="ink" type="text" id="f-title" data-k="me/title" placeholder="예) 골목 끝의 대문"></div>
+</div>
+
+<p class="warn no-print">적은 내용은 <span class="key">이 브라우저에만</span> 남습니다. 시크릿·공용 기기라면 창을 닫는 순간 사라집니다. 중간과 마칠 때 <span class="key">인쇄 · PDF</span> 또는 <span class="key">텍스트로 내보내기</span>로 한 번씩 남겨 두십시오.</p>
+</section>
+
+
+<!-- ══════════════════ 챕터 1 ══════════════════ -->
+<section id="p1" data-part class="part">
+  <div class="part__head">
+    <span class="part__n">챕터 1</span>
+    <h2 class="part__title">이끄는 질문을 만들어 봅니다</h2>
+  </div>
+
+  <p class="lede">합평에서 가장 어려운 일은 <b>조언하지 않고 묻는 것</b>입니다. 조언은 쉽게 질문 옷을 입습니다.</p>
+
+  <h3 class="h">질문은 두 가지입니다</h3>
+  <div class="tw tw--tight">
+  <table>
+    <thead><tr><th style="width:22%"></th><th>확인 질문</th><th>이끄는 질문</th></tr></thead>
+    <tbody>
+      <tr><td><b>묻는 것</b></td><td>사실</td><td>쓴 사람이 아직 꺼내지 않은 것</td></tr>
+      <tr><td><b>답</b></td><td>짧고 바로 나옵니다</td><td>생각해야 나옵니다. 답이 곧 새 문장이 됩니다</td></tr>
+      <tr><td><b>예</b></td><td>"거기 몇 시에 가셨어요?"</td><td>"그 대문 앞에서 화자는 처음에 어디를 봤나요?"</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 class="h">질문을 던지기 전에 스스로 묻는 두 가지</h3>
+  <div class="test-pair">
+    <div class="test"><span class="test__n">1</span><p><b>내 머릿속에 정답이 있나?</b><br><span class="small">있다면 그것은 질문이 아니라 조언입니다. 판단을 빼거나 묻지 않습니다.</span></p></div>
+    <div class="test"><span class="test__n">2</span><p><b>쓴 사람이 답하기 전에 생각해야 하나?</b><br><span class="small">바로 답할 수 있으면 확인 질문입니다. 멈춰서 생각해야 하면 이끄는 질문입니다.</span></p></div>
+  </div>
+
+  <h3 class="h">연습할 글 — 「골목 끝의 대문」 (연습용으로 지은 글)</h3>
+  <div class="sample">
+    <p>골목 끝에 녹슨 철대문이 있었다. 대문에는 누가 매직으로 「개 조심」이라고 적어 두었다. 옆 담벼락의 안내판에는 이 일대가 1930년대에 만들어진 도시형 한옥 마을이라는 설명이 길게 적혀 있었다. 나는 안내판을 끝까지 읽었다. 대문은 반쯤 열려 있었다. 안에서 라디오 소리가 났다. 골목을 쓸던 할머니가 "여기 아직 사람 살아요" 하고 지나갔다. 그날 나는 오래된 것들이 아직 살아 있다는 것을 배웠고, 사라져 가는 것들을 기록하는 일의 소중함을 느꼈으며, 앞으로 학생들과 이런 골목을 걸어 보고 싶다는 생각이 들었다.</p>
+  </div>
+  <p class="small">아래의 네 계단과 칸 1-A는 모두 이 글을 두고 합니다.</p>
+
+  <h3 class="h">같은 말이 질문이 되기까지 — 네 계단</h3>
+  <p>위 글을 읽고 "안내판 설명이 길다"고 느꼈다고 해 봅시다.</p>
+  <ol class="ladder">
+    <li class="ladder__step"><span class="ladder__tag ladder__tag--no">조언</span>"안내판 설명은 좀 줄이면 어때요?"</li>
+    <li class="ladder__step"><span class="ladder__tag ladder__tag--no">조언</span>"설명을 반으로 줄이면 어떻게 될까요?" <span class="small">— 질문처럼 들리지만 답이 정해져 있습니다</span></li>
+    <li class="ladder__step"><span class="ladder__tag">질문</span>"안내판을 읽고 나서 화자가 다시 올려다본 것은 무엇이었어요?"</li>
+    <li class="ladder__step"><span class="ladder__tag">더 좋은 질문</span>"안내판을 읽기 전과 읽은 뒤, 같은 대문이 화자에게 어떻게 달라 보였나요?"</li>
+  </ol>
+  <p class="small">셋째·넷째 계단에는 정답이 없습니다. 쓴 사람이 답을 쓰면 그 장면이 남고, 나머지 설명은 쓴 사람이 알아서 덜어 냅니다. <span class="key">줄이라고 말하지 않아도 줄어듭니다.</span></p>
+
+  <div class="cell" id="c-1a">
+    <div class="cell__head"><span class="cell__n">칸 1-A</span><h3 class="cell__title">조언을 이끄는 질문으로 바꾸기</h3></div>
+    <p class="cell__hint">「골목 끝의 대문」을 읽은 누군가가 아래처럼 말했습니다. 같은 자리를 가리키되 <span class="key">정답이 없는 질문</span>으로 바꿔 적어 보세요. 질문 안에 <b>글 속의 낱말 하나</b>(대문 · 할머니 · 라디오 · 안내판…)를 꼭 넣습니다. 다 적은 뒤 맨 아래 예시와 견주어 봅니다.</p>
+    <div class="swap">
+      <p class="swap__from">"마지막 문장은 빼는 게 어때요?"</p>
+      <div class="line"><input class="ink" type="text" data-k="sw/1" aria-label="바꾼 질문 1" placeholder="마지막 문장을 쓰기 직전, 화자는…"></div>
+    </div>
+    <div class="swap">
+      <p class="swap__from">"라디오 소리를 좀 더 묘사하면 어때요?"</p>
+      <div class="line"><input class="ink" type="text" data-k="sw/2" aria-label="바꾼 질문 2" placeholder="라디오 소리가 났을 때…"></div>
+    </div>
+    <div class="swap">
+      <p class="swap__from">"느낀 점이 너무 많은 것 같아요."</p>
+      <div class="line"><input class="ink" type="text" data-k="sw/3" aria-label="바꾼 질문 3" placeholder="그날 화자가…"></div>
+    </div>
+    <details class="eg-box">
+      <summary>예시 열어 보기 — 먼저 적은 뒤에</summary>
+      <div class="det-body">
+        <ul class="plain">
+          <li>① "마지막 문장을 쓰기 직전, 화자는 대문 앞에 서 있었나요, 골목 밖에 나와 있었나요? 무엇이 보였어요?"</li>
+          <li>② "대문 안에서 라디오 소리가 났을 때 화자는 몇 걸음쯤 떨어져 있었어요? 무슨 노래나 말이 들렸어요?"</li>
+          <li>③ "할머니가 지나간 뒤, 화자가 가장 늦게 알아차린 것은 무엇이었나요?"</li>
+        </ul>
+        <p class="small">세 예시 모두 <b>장면 · 말 · 순간</b>을 묻습니다. "줄이세요", "넣으세요"가 들어 있지 않습니다.</p>
+      </div>
+    </details>
+  </div>
+
+  <h3 class="h">질문의 세 갈래</h3>
+  <p>막히면 아래 표에서 하나를 골라 쓴 사람의 글에 맞게 바꿔 말합니다.</p>
+  <div class="tw tw--tight">
+  <table class="qtable">
+    <thead><tr><th style="width:24%">갈래</th><th>이렇게 묻습니다</th></tr></thead>
+    <tbody>
+      <tr><td><b>보이게</b><br><span class="small">장면 보태기</span></td><td>"그때 눈앞에 뭐가 있었어요?" · "그분이 실제로 한 말은 뭐였어요?" · "손이 어디에 닿아 있었어요?"</td></tr>
+      <tr><td><b>고르게</b><br><span class="small">덜기</span></td><td>"이 글에서 한 장면만 남긴다면 어디예요?" · "이 문단을 쓸 때 제일 먼저 떠오른 게 뭐였어요?"</td></tr>
+      <tr><td><b>다다르게</b><br><span class="small">끝맺기</span></td><td>"다녀와서 처음 누구한테 이 얘기를 했어요?" · "그날 이후 달라진 게 하나 있다면?"</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 class="h">하지 않는 말</h3>
+  <div class="tw tw--tight">
+  <table>
+    <thead><tr><th style="width:42%">이런 말이 나오면</th><th>이렇게 바꿉니다</th></tr></thead>
+    <tbody>
+      <tr><td>"~하면 어때요?"</td><td>조언입니다. 그 자리에서 쓴 사람이 무엇을 봤는지 묻는 말로 바꿉니다.</td></tr>
+      <tr><td>"좋았어요."</td><td>어느 줄이었는지 짚어 함께 말합니다. "「○○」에서 멈췄어요."</td></tr>
+      <tr><td>"헷갈려요." · "길어요."</td><td>나를 주어로 바꿉니다. "여기서부터 저는 헷갈렸어요."</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="done">
+    <p class="done__t">이 챕터 완료</p>
+    <label class="chk"><input type="checkbox" data-progress data-k="p1/d1"><span>칸 1-A의 세 질문을 바꿔 적었습니다</span></label>
+    <label class="chk"><input type="checkbox" data-progress data-k="p1/d2"><span>두 가지 자기 점검(정답이 있나 · 생각해야 하나)을 말할 수 있습니다</span></label>
+  </div>
+</section>
+
+
+<!-- ══════════════════ 챕터 2 ══════════════════ -->
+<section id="p2" data-part class="part" data-track="a">
+  <div class="part__head">
+    <span class="part__n">챕터 2 · A</span>
+    <h2 class="part__title">합평 원 — 원고를 낸 분</h2>
+  </div>
+  <p class="track-note">B 자리를 고르셨다면 <a href="#p3">챕터 3</a>으로 가십시오.</p>
+
+  <div class="seat seat--student">
+    <span class="seat__label">◀ 시작하기 전에 — 차례와 진행</span>
+    <p class="seat__note">다섯 분이 한 사람씩 돌아가며 합평을 받습니다. 한 분이 합평을 받을 때 나머지 네 분은 <b>읽는 사람</b>이 되고, 그중 한 분이 <b>진행</b>을 맡습니다.</p>
+    <ul class="plain rules">
+      <li><b>원고</b> — 읽는 분들은 쓴 분의 원고를 인쇄본이나 화면으로 펴 둡니다. 원고를 아직 받지 못했다면 시작 전에 말씀하십시오.</li>
+      <li><b>진행</b> — 첫 분의 진행은 강사가 맡습니다. 그다음부터는 <span class="key">방금 합평을 받은 분이 다음 분의 진행</span>을 맡습니다.</li>
+      <li><b>차례</b> — 아래 표에 차례대로 이름을 적어 둡니다.</li>
+    </ul>
+    <div class="cell" id="c-2o">
+      <div class="cell__head"><span class="cell__n">칸 2-0</span><h3 class="cell__title">차례표</h3></div>
+      <div class="tw tw--tight">
+      <table class="order-table">
+        <thead><tr><th style="width:14%">차례</th><th>합평 받는 분</th><th style="width:34%">진행 맡은 분</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td><input class="ink" type="text" data-k="ord/1w" aria-label="1번째 합평 받는 분"></td><td>강사</td></tr>
+          <tr><td>2</td><td><input class="ink" type="text" data-k="ord/2w" aria-label="2번째 합평 받는 분"></td><td class="small dim">1번째 분</td></tr>
+          <tr><td>3</td><td><input class="ink" type="text" data-k="ord/3w" aria-label="3번째 합평 받는 분"></td><td class="small dim">2번째 분</td></tr>
+          <tr><td>4</td><td><input class="ink" type="text" data-k="ord/4w" aria-label="4번째 합평 받는 분"></td><td class="small dim">3번째 분</td></tr>
+          <tr><td>5</td><td><input class="ink" type="text" data-k="ord/5w" aria-label="5번째 합평 받는 분"></td><td class="small dim">4번째 분</td></tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="seat seat--student">
+    <span class="seat__label">◀ 내 차례가 오기 전에</span>
+    <p class="seat__note">아래 두 칸을 채워 둡니다.</p>
+
+    <div class="cell" id="c-2a">
+      <div class="cell__head"><span class="cell__n">칸 2-A</span><h3 class="cell__title">내 차례에 할 말</h3></div>
+      <div class="field">
+        <label class="field__label" for="a-why">① 이 글을 쓰게 된 계기 <b>한 줄</b></label>
+        <div class="line"><input class="ink" type="text" id="a-why" data-k="a/why" placeholder="예) 동료 선생님들과 골목 답사를 다녀와서 쓴 글입니다."></div>
+      </div>
+      <div class="field">
+        <label class="field__label" for="a-help">② 도움받고 싶은 곳 <b>하나</b></label>
+        <div class="line"><input class="ink" type="text" id="a-help" data-k="a/help" placeholder="예) 셋째 문단의 대문 장면이 읽는 분께 보이는지 궁금합니다."></div>
+      </div>
+      <p class="small">"전체적으로 봐 주세요"는 고르지 않은 것과 같습니다. <span class="key">한 장면 · 한 문단 · 한 줄</span>로 좁힙니다.</p>
+      <div class="field">
+        <label class="field__label" for="a-read">③ 소리 내 읽을 부분</label>
+        <div class="line"><input class="ink" type="text" id="a-read" data-k="a/read" placeholder="예) 2쪽 「대문은 반쯤 열려 있었다」부터 문단 끝까지"></div>
+      </div>
+      <p class="small">A4 반 쪽에서 한 쪽 정도. 긴 산문이면 ②의 자리가 들어 있는 장면 하나만, 시는 한 편 전부를 읽습니다.</p>
+    </div>
+
+    <div class="cell" id="c-2b">
+      <div class="cell__head"><span class="cell__n">칸 2-B</span><h3 class="cell__title">의도 카드 — 적고 엎어 둡니다</h3></div>
+      <p class="cell__hint">이 글로 <b>정말 말하고 싶었던 것</b>을 한 문장으로 적고 카드를 엎어 둡니다. 읽는 분들이 본 것과 질문을 다 말한 뒤에 뒤집습니다. 먼저 말하면 읽는 분들이 내 의도를 확인하며 읽게 되고, <span class="key">의도와 읽힘 사이의 틈</span>이 가려집니다. 그 틈이 고쳐 쓸 자리입니다.</p>
+      <div class="intent" id="intent" data-state="open">
+        <div class="intent__face">
+          <textarea class="ink" id="a-intent" data-k="a/intent" rows="3" placeholder="예) 사라진 줄 알았던 동네에 아직 사람이 산다는 것."></textarea>
+        </div>
+        <div class="intent__back" aria-hidden="true"><span>의도 카드</span><b>읽는 분들의 말을 다 들은 뒤에 뒤집습니다</b></div>
+      </div>
+      <div class="mk mk--do no-print">
+        <button class="btn" id="btn-intent" type="button" aria-controls="intent">카드 엎어 두기</button>
+        <span class="small" id="intent-msg"></span>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="h">한 사람의 합평 순서 — 일곱 걸음</h3>
+  <ol class="order">
+    <li><b>쓴 사람</b> — 계기 한 줄과 도움받고 싶은 곳 하나를 말합니다. 의도 카드는 엎어 둡니다.</li>
+    <li><b>쓴 사람</b> — 고른 부분을 소리 내 읽습니다.</li>
+    <li><b>읽는 사람 · 짚기</b> — 마음에 남은 낱말이나 장면을 하나씩 말합니다. 반드시 어느 줄인지 가리킵니다.</li>
+    <li><b>읽는 사람 · 되비추기</b> — "제게는 ~한 이야기로 들렸어요."</li>
+    <li><b>읽는 사람 · 이끄는 질문</b> — 쓴 사람이 도움받고 싶다고 한 자리에 대해 묻습니다. <span class="key">쓴 사람은 답하지 않고 받아 적습니다.</span></li>
+    <li><b>쓴 사람 · 카드 뒤집기</b> — 의도를 밝히고, 들은 것과 달랐던 점을 말하고, 가장 쓰고 싶어진 질문 하나를 고릅니다.</li>
+    <li><b>읽는 사람 · 허락받은 의견</b> — "○○에 대해 의견이 있는데 들어 보시겠어요?" 쓴 사람은 사양해도 됩니다.</li>
+  </ol>
+  <p class="small">의견부터 나오면 쓴 사람은 설명하고 방어하기 시작합니다. 그래서 순서를 지킵니다.</p>
+
+  <details class="facil" id="facil">
+    <summary>진행을 맡았다면 — 여는 말 · 말 카드 · 걸음 안내</summary>
+    <div class="det-body">
+      <p>진행을 맡은 분은 걸음을 하나씩 열고, 판단이 나오면 근거를 묻고, 조언이 나오면 질문으로 돌립니다. 진행을 맡은 분도 읽는 사람으로 짚고 묻습니다.</p>
+      <h4 class="h4">걸음마다 여는 말</h4>
+      <div class="tw tw--tight">
+      <table>
+        <thead><tr><th style="width:30%">걸음</th><th>이렇게 엽니다</th></tr></thead>
+        <tbody>
+          <tr><td>1 · 계기와 도움받을 곳</td><td>"○○ 선생님 차례입니다. 어떤 글인지 한 줄, 도움받고 싶은 곳 하나를 말씀해 주세요."</td></tr>
+          <tr><td>2 · 소리 내 읽기</td><td>"읽어 주세요. 듣는 분들은 마음에 남는 줄에 표시해 두세요."</td></tr>
+          <tr><td>3 · 짚기</td><td>"마음에 남은 낱말이나 장면을 한 분씩 말씀해 주세요. 어느 줄인지도 함께요."</td></tr>
+          <tr><td>4 · 되비추기</td><td>"이 글이 어떤 이야기로 들렸는지 「제게는 ~로 들렸어요」로 말씀해 주세요."</td></tr>
+          <tr><td>5 · 이끄는 질문</td><td>"○○ 선생님이 도움받고 싶다고 한 곳은 「…」입니다. 그 자리에 대해 질문해 주세요. 선생님은 받아 적기만 하세요."</td></tr>
+          <tr><td>6 · 카드 뒤집기</td><td>"이제 카드를 뒤집어 주세요. 무엇을 쓰고 싶으셨는지, 들은 것과 무엇이 달랐는지요."</td></tr>
+          <tr><td>7 · 허락받은 의견</td><td>"의견이 있는 분은 먼저 들어 보실지 여쭤 주세요."</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <h4 class="h4">이럴 때는</h4>
+      <div class="tw tw--tight">
+      <table>
+        <thead><tr><th style="width:38%">이럴 때</th><th>이렇게 말합니다</th></tr></thead>
+        <tbody>
+          <tr><td>"좋았어요", "길어요"가 나왔을 때</td><td>"어느 줄에서 그렇게 느끼셨어요?"</td></tr>
+          <tr><td>"헷갈려요"처럼 글이 주어일 때</td><td>"어디서부터 헷갈리셨는지 짚어 주실래요?"</td></tr>
+          <tr><td>"~하면 어때요?"가 나왔을 때</td><td>"제안처럼 들려요. 쓰신 분이 생각해 볼 수 있게 질문으로 바꿔 볼까요?"</td></tr>
+          <tr><td>쓴 사람이 설명을 시작할 때</td><td>"지금은 받아 적어 두시고, 카드 뒤집을 때 말씀해 주세요."</td></tr>
+          <tr><td>이야기가 쓴 사람 개인 쪽으로 흐를 때</td><td>"화자가 그 순간 무엇을 봤는지로 돌아가 볼게요."</td></tr>
+          <tr><td>의견을 말하고 싶어 하는 분에게</td><td>"쓰신 분께 들어 보실지 먼저 여쭤 주세요."</td></tr>
+        </tbody>
+      </table>
+      </div>
+
+      <div class="stepper no-print" id="stepper">
+        <p class="stepper__head">걸음 안내 <span class="small">— 진행을 맡은 분의 화면에서 씁니다</span></p>
+        <div class="stepper__now">
+          <span class="stepper__idx" id="st-idx">1 / 7</span>
+          <span class="stepper__label" id="st-label">쓴 사람 · 계기와 도움받을 곳</span>
+          <span class="stepper__clock" id="st-clock" aria-live="off">0:30</span>
+        </div>
+        <p class="stepper__say" id="st-say"></p>
+        <div class="stepper__bar"><i id="st-bar"></i></div>
+        <div class="stepper__tools">
+          <button class="btn" id="st-play" type="button">시작</button>
+          <button class="btn" id="st-next" type="button">다음 걸음</button>
+          <button class="btn btn--quiet" id="st-reset" type="button">처음으로</button>
+        </div>
+        <p class="small" id="st-msg" aria-live="polite"></p>
+      </div>
+    </div>
+  </details>
+
+  <div class="seat seat--student">
+    <span class="seat__label">◀ 다른 분 차례에 — 읽는 사람으로</span>
+    <p class="seat__note">다섯 번 가운데 네 번은 읽는 사람입니다. 막히면 아래 세 가지 말틀 가운데 하나를 꺼내 씁니다.</p>
+    <div class="moves">
+      <div class="move"><b>짚기</b><span>"「○○」에서 멈췄어요."</span></div>
+      <div class="move"><b>되비추기</b><span>"제게는 ~한 이야기로 들렸어요."</span></div>
+      <div class="move"><b>이끄는 질문</b><span><a href="#p1">챕터 1</a>의 세 갈래 — 보이게 · 고르게 · 다다르게</span></div>
+    </div>
+
+    <div class="cell" id="c-2c">
+      <div class="cell__head"><span class="cell__n">칸 2-C</span><h3 class="cell__title">읽는 사람 메모 — 네 분</h3></div>
+      <p class="cell__hint">짚은 자리와 질문을 적어 두었다가, 그분의 합평이 끝나면 <b>메모 복사</b>를 눌러 메신저나 쪽지로 건넵니다. 쓴 분은 질문을 들은 그대로 받게 되고, 받아 적기 부담을 덥니다.</p>
+      <div class="slot" id="c-2c-1">
+        <p class="slot__n">1</p>
+        <div class="slot__grid">
+          <div class="field"><label class="field__label" for="r1-who">쓴 분</label><div class="line"><input class="ink" type="text" id="r1-who" data-k="r/1/who" placeholder="이름"></div></div>
+          <div class="field"><label class="field__label" for="r1-help">도움받고 싶다고 한 곳</label><div class="line"><input class="ink" type="text" id="r1-help" data-k="r/1/help" placeholder="예) 셋째 문단 대문 장면"></div></div>
+        </div>
+        <div class="field"><label class="field__label" for="r1-point">내가 짚은 자리</label><textarea class="ink" id="r1-point" data-k="r/1/point" rows="1" placeholder="예) 「개 조심」에서 멈췄어요"></textarea></div>
+        <div class="field"><label class="field__label" for="r1-q">내 질문</label><textarea class="ink" id="r1-q" data-k="r/1/q" rows="2" placeholder="예) 라디오 소리가 났을 때 화자는 몇 걸음쯤 떨어져 있었어요?"></textarea></div>
+        <div class="mk mk--do no-print"><button class="btn" type="button" data-copy-slot="1">이분께 건넬 메모 복사</button><span class="small" data-copy-msg="1"></span></div>
+      </div>
+      <div class="slot" id="c-2c-2">
+        <p class="slot__n">2</p>
+        <div class="slot__grid">
+          <div class="field"><label class="field__label" for="r2-who">쓴 분</label><div class="line"><input class="ink" type="text" id="r2-who" data-k="r/2/who" placeholder="이름"></div></div>
+          <div class="field"><label class="field__label" for="r2-help">도움받고 싶다고 한 곳</label><div class="line"><input class="ink" type="text" id="r2-help" data-k="r/2/help" placeholder="예) 셋째 문단 대문 장면"></div></div>
+        </div>
+        <div class="field"><label class="field__label" for="r2-point">내가 짚은 자리</label><textarea class="ink" id="r2-point" data-k="r/2/point" rows="1" placeholder="예) 「개 조심」에서 멈췄어요"></textarea></div>
+        <div class="field"><label class="field__label" for="r2-q">내 질문</label><textarea class="ink" id="r2-q" data-k="r/2/q" rows="2" placeholder="예) 라디오 소리가 났을 때 화자는 몇 걸음쯤 떨어져 있었어요?"></textarea></div>
+        <div class="mk mk--do no-print"><button class="btn" type="button" data-copy-slot="2">이분께 건넬 메모 복사</button><span class="small" data-copy-msg="2"></span></div>
+      </div>
+      <div class="slot" id="c-2c-3">
+        <p class="slot__n">3</p>
+        <div class="slot__grid">
+          <div class="field"><label class="field__label" for="r3-who">쓴 분</label><div class="line"><input class="ink" type="text" id="r3-who" data-k="r/3/who" placeholder="이름"></div></div>
+          <div class="field"><label class="field__label" for="r3-help">도움받고 싶다고 한 곳</label><div class="line"><input class="ink" type="text" id="r3-help" data-k="r/3/help" placeholder="예) 셋째 문단 대문 장면"></div></div>
+        </div>
+        <div class="field"><label class="field__label" for="r3-point">내가 짚은 자리</label><textarea class="ink" id="r3-point" data-k="r/3/point" rows="1" placeholder="예) 「개 조심」에서 멈췄어요"></textarea></div>
+        <div class="field"><label class="field__label" for="r3-q">내 질문</label><textarea class="ink" id="r3-q" data-k="r/3/q" rows="2" placeholder="예) 라디오 소리가 났을 때 화자는 몇 걸음쯤 떨어져 있었어요?"></textarea></div>
+        <div class="mk mk--do no-print"><button class="btn" type="button" data-copy-slot="3">이분께 건넬 메모 복사</button><span class="small" data-copy-msg="3"></span></div>
+      </div>
+      <div class="slot" id="c-2c-4">
+        <p class="slot__n">4</p>
+        <div class="slot__grid">
+          <div class="field"><label class="field__label" for="r4-who">쓴 분</label><div class="line"><input class="ink" type="text" id="r4-who" data-k="r/4/who" placeholder="이름"></div></div>
+          <div class="field"><label class="field__label" for="r4-help">도움받고 싶다고 한 곳</label><div class="line"><input class="ink" type="text" id="r4-help" data-k="r/4/help" placeholder="예) 셋째 문단 대문 장면"></div></div>
+        </div>
+        <div class="field"><label class="field__label" for="r4-point">내가 짚은 자리</label><textarea class="ink" id="r4-point" data-k="r/4/point" rows="1" placeholder="예) 「개 조심」에서 멈췄어요"></textarea></div>
+        <div class="field"><label class="field__label" for="r4-q">내 질문</label><textarea class="ink" id="r4-q" data-k="r/4/q" rows="2" placeholder="예) 라디오 소리가 났을 때 화자는 몇 걸음쯤 떨어져 있었어요?"></textarea></div>
+        <div class="mk mk--do no-print"><button class="btn" type="button" data-copy-slot="4">이분께 건넬 메모 복사</button><span class="small" data-copy-msg="4"></span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="seat seat--student">
+    <span class="seat__label">◀ 내 차례에</span>
+    <p class="seat__note">읽는 분들이 하는 말을 받아 적습니다. 따지거나 설명하지 않습니다. <span class="key">잘못 읽혔다면 그것도 재료입니다.</span> 질문을 다 받아 적지 못해도 괜찮습니다. 읽는 분들이 끝나고 메모로 건넵니다.</p>
+
+    <div class="cell" id="c-2d">
+      <div class="cell__head"><span class="cell__n">칸 2-D</span><h3 class="cell__title">받아 적기</h3></div>
+      <div class="field">
+        <label class="field__label" for="a-point">짚어 준 자리 (낱말 · 장면)</label>
+        <textarea class="ink" id="a-point" data-k="a/point" rows="2" placeholder="예) 「개 조심」 손글씨 — 두 분이 짚음"></textarea>
+      </div>
+      <div class="field">
+        <label class="field__label" for="a-sayback">되비춰 준 말</label>
+        <textarea class="ink" id="a-sayback" data-k="a/sayback" rows="2" placeholder="예) 오래된 동네가 아니라 지금 사는 사람 이야기로 들렸다"></textarea>
+      </div>
+      <div class="field">
+        <label class="field__label" for="a-qs">받은 질문 (들은 그대로)</label>
+        <textarea class="ink" id="a-qs" data-k="a/qs" rows="4" placeholder="예) 할머니는 대문을 밀고 들어가며 뭐라고 하셨어요?"></textarea>
+      </div>
+      <div class="field">
+        <label class="field__label" for="a-gap">카드를 뒤집고 — 내 의도와 달리 읽힌 곳</label>
+        <textarea class="ink" id="a-gap" data-k="a/gap" rows="2" placeholder="예) 나는 골목의 역사를 쓰고 싶었는데, 다들 할머니 장면에서 멈췄다"></textarea>
+      </div>
+      <div class="field field--pick">
+        <label class="field__label" for="a-chosen">가장 쓰고 싶어진 질문 <b>하나</b></label>
+        <textarea class="ink" id="a-chosen" data-k="a/chosen" rows="2" placeholder="받은 질문 가운데 하나를 골라 옮겨 적습니다"></textarea>
+      </div>
+      <p class="small">고른 질문은 <a href="#p4">챕터 4</a>에 그대로 옮겨집니다. 거기서 글로 답합니다.</p>
+    </div>
+  </div>
+
+  <div class="done">
+    <p class="done__t">이 챕터 완료</p>
+    <label class="chk"><input type="checkbox" data-progress data-k="p2/d1"><span>내 차례에 받은 질문을 받아 적었습니다</span></label>
+    <label class="chk"><input type="checkbox" data-progress data-k="p2/d2"><span>의도 카드를 뒤집고, 쓰고 싶어진 질문 하나를 골랐습니다</span></label>
+    <label class="chk"><input type="checkbox" data-progress data-k="p2/d3"><span>읽는 사람으로 짚은 자리와 질문을 쓴 분들께 건넸습니다</span></label>
+  </div>
+</section>
+
+
+<!-- ══════════════════ 챕터 3 ══════════════════ -->
+<section id="p3" data-part class="part" data-track="b">
+  <div class="part__head">
+    <span class="part__n">챕터 3 · B</span>
+    <h2 class="part__title">질문 사다리 — 아직 쓰는 중인 분</h2>
+  </div>
+  <p class="track-note">A 자리를 고르셨다면 <a href="#p2">챕터 2</a>로 가십시오.</p>
+
+  <div class="seat seat--student">
+    <span class="seat__label">◀ 짝과 함께</span>
+    <p class="seat__note">둘씩 짝을 짓습니다. 사람 수가 홀수면 한 모둠은 셋이 되어 <b>묻는 사람 → 쓰는 사람 → 듣는 사람</b>을 돌아가며 맡습니다. 듣는 사람은 쓰는 사람이 막힐 때 짝 대신 한 번 되물을 수 있습니다.</p>
+
+    <h3 class="h4">이렇게 오릅니다</h3>
+    <ol class="order">
+      <li>쓰는 사람이 칸 3-A의 <b>0번</b>(어디에 대해 쓰나)을 적습니다.</li>
+      <li>짝이 1번부터 질문을 소리 내 읽습니다. 쓰는 사람은 <span class="key">말 대신 메모로</span> 답합니다.</li>
+      <li>짝은 계단마다 한 번만 되물을 수 있습니다. "그때 무엇이 보였어요?" "그분이 정확히 뭐라고 했어요?"</li>
+      <li>여섯 계단을 다 오르면 자리를 바꿉니다.</li>
+      <li>둘 다 끝나면 각자 칸 3-C에서 메모를 잇습니다.</li>
+    </ol>
+    <p class="spec">짝이 할 수 있는 말은 <span class="key">강점과 질문</span>뿐입니다. "이건 좋네요", "그다음엔요?" 처음 쓰는 글에는 고칠 곳을 말하지 않습니다.</p>
+
+    <div class="cell" id="c-3a">
+      <div class="cell__head"><span class="cell__n">칸 3-A</span><h3 class="cell__title">여섯 계단</h3></div>
+      <p class="cell__hint">문장이 아니어도 됩니다. 낱말 · 메모 · 들은 말 그대로를 적습니다.</p>
+      <div class="field rung">
+        <label class="field__label" for="b0"><span class="rung__n rung__n--zero">0</span>어디에 대해 쓰나요? 장소나 그날 하나</label>
+        <div class="line"><input class="ink" type="text" id="b0" data-k="b/0" placeholder="예) 동네 뒷골목 끝의 오래된 철대문"></div>
+      </div>
+      <div class="field rung">
+        <label class="field__label" for="b1"><span class="rung__n">1</span>그곳에 닿았을 때 제일 먼저 눈에 들어온 것은?</label>
+        <textarea class="ink" id="b1" data-k="b/1" rows="2" placeholder="예) 녹슨 철대문에 붙은 손글씨 「개 조심」"></textarea>
+      </div>
+      <div class="field rung">
+        <label class="field__label" for="b2"><span class="rung__n">2</span>예상과 달랐던 것 하나는?</label>
+        <textarea class="ink" id="b2" data-k="b/2" rows="2" placeholder="예) 빈집인 줄 알았는데 대문 안에서 라디오 소리가 났다"></textarea>
+      </div>
+      <div class="field rung">
+        <label class="field__label" for="b3"><span class="rung__n">3</span>그 자리에서 누가 무슨 말을 했나요? 들은 그대로 적어 보세요.</label>
+        <textarea class="ink" id="b3" data-k="b/3" rows="2" placeholder="예) &quot;여기 아직 사람 살아요.&quot; — 골목을 쓸던 할머니"></textarea>
+      </div>
+      <div class="field rung">
+        <label class="field__label" for="b4"><span class="rung__n">4</span>그때 떠오른 다른 사람이나 다른 장소가 있었나요?</label>
+        <textarea class="ink" id="b4" data-k="b/4" rows="2" placeholder="예) 어릴 적 외갓집 대문"></textarea>
+      </div>
+      <div class="field rung">
+        <label class="field__label" for="b5"><span class="rung__n">5</span>다녀와서 처음 누구에게 이 이야기를 했나요? 뭐라고 했나요?</label>
+        <textarea class="ink" id="b5" data-k="b/5" rows="2" placeholder="예) 동생에게 &quot;개는 없고 글씨만 있더라&quot;"></textarea>
+      </div>
+      <div class="field rung">
+        <label class="field__label" for="b6"><span class="rung__n">6</span>그날을 한 장면만 남긴다면?</label>
+        <textarea class="ink" id="b6" data-k="b/6" rows="2" placeholder="예) 할머니가 빗자루를 세워 두고 대문을 밀던 순간"></textarea>
+      </div>
+    </div>
+
+    <div class="cell" id="c-3b">
+      <div class="cell__head"><span class="cell__n">칸 3-B</span><h3 class="cell__title">쓰다 멈춘 원고가 있다면</h3></div>
+      <p class="cell__hint">여섯 계단 대신, 써 둔 부분을 짝에게 읽어 주고 이렇게 묻습니다. <b>"더 듣고 싶은 게 뭐예요? 제가 말하다 만 게 있어요?"</b> 내가 써 놓고도 못 본 것을 읽는 사람은 크게 듣습니다.</p>
+      <div class="field">
+        <label class="field__label" for="b-almost">짝이 더 듣고 싶다고 한 것</label>
+        <textarea class="ink" id="b-almost" data-k="b/almost" rows="2" placeholder="예) 할머니가 대문 안으로 들어간 다음"></textarea>
+      </div>
+      <div class="field">
+        <label class="field__label" for="b-cont">그 대답으로 이어 쓴 부분</label>
+        <textarea class="ink" id="b-cont" data-k="b/cont" rows="6" placeholder="써 둔 원고의 마지막 문장 다음부터 이어 씁니다"></textarea>
+      </div>
+      <p class="small">이 칸을 채웠다면 칸 3-C는 건너뛰어도 됩니다.</p>
+    </div>
+
+    <div class="cell" id="c-3c">
+      <div class="cell__head"><span class="cell__n">칸 3-C</span><h3 class="cell__title">메모를 이어 초안으로</h3></div>
+      <p class="cell__hint">버튼을 누르면 여섯 계단의 메모가 <b>6 → 1 → 2 → 3 → 4 → 5</b> 순서로 이어집니다. 남기고 싶은 한 장면이 맨 앞에 오고, 거기서 처음 본 것으로 되돌아가는 짜임입니다. 이어진 메모를 문장으로 고쳐 씁니다.</p>
+      <div class="mk mk--do no-print">
+        <button class="btn" id="btn-build-draft" type="button">메모 잇기</button>
+        <span class="small" id="draft-msg"></span>
+      </div>
+      <textarea class="ink" id="b-draft" data-k="b/draft" rows="10" placeholder="여기서 고쳐 씁니다"></textarea>
+      <p class="count" id="draft-count">0자</p>
+      <details class="eg-box">
+        <summary>예시 — 메모 여섯 개가 한 문단이 되면</summary>
+        <div class="det-body">
+          <p class="eg-draft">할머니는 빗자루를 대문 옆에 세워 두고 어깨로 문을 밀었다. 녹슨 철대문이 끼익 소리를 내며 열렸다. 문에는 누가 매직으로 「개 조심」이라고 써 두었는데, 개는 보이지 않았다. 빈집인 줄 알았던 그 안에서 라디오 소리가 흘러나왔다. "여기 아직 사람 살아요." 할머니는 나를 돌아보지도 않고 그렇게 말했다. 외갓집 대문도 저렇게 어깨로 밀어야 열렸다. 집에 돌아와 동생에게 말했다. 개는 없고 글씨만 있더라고.</p>
+          <p class="small">6번 장면(대문을 미는 할머니)으로 시작해 1번(처음 본 손글씨)으로 돌아갔습니다. 메모에 없던 말은 「끼익」과 「어깨로」 정도입니다. <span class="key">새로 지어낸 것보다 메모를 이은 것이 훨씬 많습니다.</span></p>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="done">
+    <p class="done__t">이 챕터 완료</p>
+    <label class="chk"><input type="checkbox" data-progress data-k="p3/d1"><span>여섯 계단(또는 칸 3-B)을 채웠습니다</span></label>
+    <label class="chk"><input type="checkbox" data-progress data-k="p3/d2"><span>메모를 잇거나 이어 써서 초안의 첫 모양을 만들었습니다</span></label>
+  </div>
+</section>
+
+
+<!-- ══════════════════ 챕터 4 ══════════════════ -->
+<section id="p4" data-part class="part">
+  <div class="part__head">
+    <span class="part__n">챕터 4</span>
+    <h2 class="part__title">받은 질문에 글로 답합니다</h2>
+  </div>
+
+  <p class="lede">이제 원고로 돌아갑니다. 질문의 답을 <b>설명이 아니라 장면으로</b> 씁니다. 몇 줄이어도 됩니다.</p>
+
+  <div class="seat seat--student" data-track="a">
+    <span class="seat__label">◀ A · 원고를 낸 분</span>
+    <div class="cell" id="c-4a">
+      <div class="cell__head"><span class="cell__n">칸 4-A</span><h3 class="cell__title">고른 질문에 답 쓰기</h3></div>
+      <div class="field">
+        <label class="field__label" for="chosen-mirror">고른 질문 (칸 2-D에서 옮겨 옴)</label>
+        <textarea class="ink" id="chosen-mirror" rows="2" readonly aria-label="칸 2-D에서 고른 질문"></textarea>
+      </div>
+      <div class="field">
+        <label class="field__label" for="a-answer">답 — 원고에 그대로 넣을 수 있게</label>
+        <textarea class="ink" id="a-answer" data-k="a/answer" rows="7" placeholder="예) 할머니는 빗자루를 대문 옆에 세우고 &quot;개는 없어, 글씨만 남았지&quot; 하셨다. 대문이 닫히고 라디오 소리만 골목에 남았다."></textarea>
+      </div>
+      <div class="field">
+        <label class="field__label" for="a-where">원고 어디에 넣을까요</label>
+        <div class="line"><input class="ink" type="text" id="a-where" data-k="a/where" placeholder="예) 2쪽 「대문은 반쯤 열려 있었다」 바로 뒤"></div>
+      </div>
+      <p class="small">새 장면이 들어가면 앞뒤 문장 가운데 <span class="key">이제 없어도 되는 설명</span>이 보일 수 있습니다. 덜어 낼지는 쓴 사람이 정합니다.</p>
+    </div>
+  </div>
+
+  <div class="seat seat--student" data-track="b">
+    <span class="seat__label">◀ B · 아직 쓰는 중인 분</span>
+    <p class="seat__note"><a href="#c-3c">칸 3-C</a>(또는 3-B)의 초안을 이어 씁니다. 목표는 <span class="key">마지막 문장까지 한 번 끝내 보는 것</span>입니다. 고치는 일은 그다음입니다. 막히면 칸 3-A에서 가장 짧게 쓴 계단으로 돌아가 짝에게 한 번 더 물어 달라고 합니다.</p>
+  </div>
+
+  <div class="cell" id="c-4b">
+    <div class="cell__head"><span class="cell__n">칸 4-B</span><h3 class="cell__title">함께 읽을 새 문장</h3></div>
+    <p class="cell__hint">오늘 새로 쓴 문장 가운데 <b>한두 개</b>만 골라 둡니다. 모두 함께 읽을 때 소리 내 읽습니다. 자리 순서대로 한 분씩 읽고, 이 순서에서는 <span class="key">아무도 반응하지 않고 듣기만</span> 합니다.</p>
+    <textarea class="ink ink--poem" id="new-lines" data-k="all/newlines" rows="3" placeholder="오늘 새로 쓴 문장 한두 개"></textarea>
+  </div>
+
+  <div class="done">
+    <p class="done__t">이 챕터 완료</p>
+    <label class="chk"><input type="checkbox" data-progress data-k="p4/d1"><span>질문의 답(또는 초안)을 글로 썼습니다</span></label>
+    <label class="chk"><input type="checkbox" data-progress data-k="p4/d2"><span>함께 읽을 새 문장을 골랐습니다</span></label>
+  </div>
+</section>
+
+
+<!-- ══════════════════ 챕터 5 ══════════════════ -->
+<section id="p5" data-part class="part">
+  <div class="part__head">
+    <span class="part__n">챕터 5</span>
+    <h2 class="part__title">가져갈 것 세 줄</h2>
+  </div>
+
+  <div class="cell" id="c-5a">
+    <div class="cell__head"><span class="cell__n">칸 5-A</span><h3 class="cell__title">세 줄과 날짜 하나</h3></div>
+    <div class="field">
+      <label class="field__label" for="end-keep">꼭 남길 부분</label>
+      <div class="line"><input class="ink" type="text" id="end-keep" data-k="end/keep" placeholder="예) 할머니 장면 — 여러 분이 짚었다"></div>
+    </div>
+    <div class="field">
+      <label class="field__label" for="end-next">다음에 고칠 한 가지</label>
+      <div class="line"><input class="ink" type="text" id="end-next" data-k="end/next" placeholder="예) 골목의 역사 설명 가운데 대문 앞으로 데려가는 대목 하나만 남기기"></div>
+    </div>
+    <div class="field">
+      <label class="field__label" for="end-open">아직 남은 질문</label>
+      <div class="line"><input class="ink" type="text" id="end-open" data-k="end/open" placeholder="예) 외갓집 이야기를 더 써도 될까"></div>
+    </div>
+    <div class="field">
+      <label class="field__label" for="end-date">원고를 보낼 날</label>
+      <div class="line"><input class="ink" type="text" id="end-date" data-k="end/date" placeholder="예) 10월 22일 (목)"></div>
+    </div>
+  </div>
+
+  <div class="done">
+    <p class="done__t">오늘 완료</p>
+    <label class="chk"><input type="checkbox" data-progress data-k="p5/d1"><span>세 줄과 날짜를 적었습니다</span></label>
+    <label class="chk"><input type="checkbox" data-progress data-k="p5/d2"><span>인쇄 · PDF 또는 텍스트로 내보내기로 남겨 두었습니다</span></label>
+  </div>
+</section>
+
+
+<!-- ══════════════════ 뒷장 ══════════════════ -->
+<div class="back">
+  <h3 class="h">이 순서는 어디서 왔나요</h3>
+  <p class="small">오늘의 순서는 평가하지 않는 합평으로 오래 쓰여 온 방법 다섯 가지에서 가져왔습니다.</p>
+
+  <details>
+    <summary>리즈 러먼 — 비평적 반응 과정 (Critical Response Process)</summary>
+    <div class="det-body">
+      <p>안무가 리즈 러먼이 1990년에 만든 방법입니다. <b>의미 진술 → 작가가 묻기 → 중립적 질문 → 허락받은 의견</b>의 네 단계로 갑니다. 의견은 "○○에 대해 의견이 있는데 들어 보시겠어요?"라고 먼저 묻고, 작가는 사양할 수 있습니다. 목표는 작가가 다시 작업하고 싶은 마음으로 자리를 뜨는 것입니다.</p>
+      <p class="small">오늘 가져온 것 — 순서, 허락받은 의견 · <a href="https://lizlerman.com/critical-response-process" target="_blank" rel="noopener">lizlerman.com</a></p>
+    </div>
+  </details>
+
+  <details>
+    <summary>피터 엘보우 · 팻 벨라노프 — 『Sharing and Responding』</summary>
+    <div class="det-body">
+      <p>교사 없이 굴러가는 글쓰기 모임을 위한 반응 방법 열한 가지를 정리했습니다. 오늘은 그중 <b>짚기</b>(마음에 남은 낱말·구절), <b>되비추기</b>(들은 것을 묻는 말투로 돌려주기), <b>거의 말할 뻔한 것</b>(더 듣고 싶은 것), <b>그냥 나누기</b>(반응 없이 듣기)를 씁니다.</p>
+      <p>두 개의 역설을 말합니다. 읽는 사람은 자기에게 일어난 반응에 대해 언제나 옳고, 쓴 사람은 그 반응으로 무엇을 할지에 대해 언제나 옳습니다. 그리고 쓴 사람은 어떤 반응이 필요한지 스스로 정하되, 듣는 동안에는 따지지 않습니다. 잘못 읽힌 것도 가치 있는 재료입니다.</p>
+      <p class="small">오늘 가져온 것 — 짚기 · 되비추기 · 나를 주어로 말하기</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>하버드 프로젝트 제로 — 협력적 평가 협의회 (Collaborative Assessment Conference)</summary>
+    <div class="det-body">
+      <p>교사들이 학생 작품을 함께 보는 방법으로 1988년 스티브 사이델과 동료들이 만들었습니다. 작품을 내놓은 교사는 처음에 <b>아무 말도 하지 않습니다.</b> 모두 "무엇이 보이나요?"에서 시작해 질문을 던지고, 이 사람이 무엇과 씨름했을지 짐작한 뒤에야 작품을 낸 교사가 말합니다. 판단이 섞여 나오면 "어디서 그렇게 보셨어요?"라고 근거를 묻습니다.</p>
+      <p class="small">오늘 가져온 것 — 의도 카드를 엎어 두는 이유, 근거 묻기</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>NSRF — 이끄는 질문 안내 (Pocket Guide to Probing Questions)</summary>
+    <div class="det-body">
+      <p>교사 협의회를 위해 만든 한 장짜리 안내입니다. 확인 질문과 이끄는 질문을 가르는 기준으로 <b>"답하기 전에 생각해야 하는가"</b>를 제시합니다. 그런 효과가 없는 질문은 확인 질문이거나 <b>끝만 올려 말한 조언</b>이라고 봅니다. 챕터 1의 네 계단은 이 안내의 사다리 구조를 따랐습니다.</p>
+      <p class="small">오늘 가져온 것 — 두 가지 자기 점검, 네 계단</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>팻 슈나이더 — 앰허스트 작가·예술가 방법 (AWA)</summary>
+    <div class="det-body">
+      <p>함께 쓰고 그 자리에서 소리 내 읽는 모임입니다. <b>새로 쓴 글에는 강점만</b> 말하고, 모든 글을 허구로 대해 쓴 사람이 아니라 <b>화자</b>라고 부릅니다. 모임에서 나눈 것은 모임 안에 둡니다.</p>
+      <p class="small">오늘 가져온 것 — 화자라고 부르기, B 자리의 '강점과 질문만'</p>
+    </div>
+  </details>
+
+  <div class="foot">
+    <span>© 2026 이대형. All rights reserved.</span>
+    <span>강남서초교육지원청 · 독서교육 교사지원단 · 미림마이스터고 · 원고 합평 워크숍</span>
+    <a href="https://www.instagram.com/aicreator.z" target="_blank" rel="noopener">instagram.com/aicreator.z</a>
+  </div>
+</div>
+
+</main>
+<script src="app.js"></script>
+</body>
+</html>
