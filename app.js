@@ -127,7 +127,14 @@
       var done = 0;
       boxes.forEach(function (b) { if (b.checked) done++; });
       var bar = document.querySelector('.rail__bar[data-for="' + sec.id + '"] i');
-      if (bar) bar.style.width = boxes.length ? (done / boxes.length) * 100 + "%" : "0%";
+      if (!bar) return;
+      /* 앞장에는 완료 체크가 없다 — 자리와 이름을 정하면 찬다. */
+      if (!boxes.length) {
+        var n = (document.querySelector('input[name="track"]:checked') ? 1 : 0) + (val("f-name") ? 1 : 0);
+        bar.style.width = n * 50 + "%";
+        return;
+      }
+      bar.style.width = (done / boxes.length) * 100 + "%";
     });
   }
 
@@ -219,9 +226,15 @@
   var intent = document.getElementById("intent");
   var intentBtn = document.getElementById("btn-intent");
   var intentMsg = document.getElementById("intent-msg");
-  function setIntent(state) {
+  /* 엎어 둔 상태도 저장한다. 쓴 사람 차례에 화면이 새로 고쳐져 의도가 드러나면 안 된다. */
+  var INTENT_KEY = NS + "ui/intent";
+  function setIntent(state, quiet) {
     if (!intent || !intentBtn) return;
     intent.dataset.state = state;
+    if (store && !quiet) {
+      if (state === "closed") store.setItem(INTENT_KEY, "closed");
+      else store.removeItem(INTENT_KEY);
+    }
     var closed = state === "closed";
     intentBtn.textContent = closed ? "카드 뒤집기" : "카드 엎어 두기";
     intentBtn.setAttribute("aria-pressed", closed ? "true" : "false");
@@ -365,6 +378,7 @@
   syncChosen();
   updateCount();
   paint();
+  if (store && store.getItem(INTENT_KEY) === "closed" && val("a-intent")) setIntent("closed", true);
 
   document.addEventListener("input", function (e) {
     var el = e.target;
@@ -372,6 +386,7 @@
     if (el.tagName === "TEXTAREA") grow(el);
     if (el.id === "b-draft") updateCount();
     if (el.id === "a-chosen") syncChosen();
+    if (el.id === "f-name") tally();
     if (el.type !== "checkbox" && el.type !== "radio") scheduleSave(el);
   });
 
@@ -381,7 +396,7 @@
     clearRadioSiblings(el);
     scheduleSave(el);
     if (el.type === "checkbox") tally();
-    if (el.name === "track") syncTrack();
+    if (el.name === "track") { syncTrack(); tally(); }
   });
 
   window.addEventListener("beforeunload", function () {
@@ -399,12 +414,12 @@
       reclose.push(d);
     });
     document.querySelectorAll("textarea").forEach(grow);
-    if (intent) { intentWas = intent.dataset.state; setIntent("open"); }
+    if (intent) { intentWas = intent.dataset.state; setIntent("open", true); }
   });
   window.addEventListener("afterprint", function () {
     reclose.forEach(function (d) { d.open = false; });
     reclose = [];
-    if (intent && intentWas) setIntent(intentWas);
+    if (intent && intentWas) setIntent(intentWas, true);
   });
 
   var printBtn = document.getElementById("btn-print");
@@ -478,7 +493,8 @@
       });
       if (!body.length) return;
       lines.push("──────────────────────────────");
-      lines.push(head ? head.textContent.trim() : railItem ? railItem.textContent.trim() : sec.id);
+      lines.push(head ? head.textContent.trim()
+        : railItem ? railItem.textContent.replace(/^\s*\d+/, "").trim() : sec.id);
       lines.push("");
       lines = lines.concat(body);
     });
