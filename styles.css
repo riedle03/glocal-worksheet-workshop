@@ -695,3 +695,9 @@ html, body { overflow-x: clip; }
   .cell { padding: 0 18px 18px; }
   .cell__head { margin: 0 -18px 14px; padding: 10px 18px; }
 }
+
+/* 출처 링크 */
+.srcs { list-style: none; margin: 12px 0 0; padding: 12px 0 0; border-top: 1px solid rgba(27, 27, 26, .2); font-size: 14px; }
+.srcs li { margin: 0 0 6px; padding-left: 18px; position: relative; }
+.srcs li::before { content: ""; position: absolute; left: 0; top: .6em; width: 10px; height: 3px; background: var(--carbon); }
+.srcs a { font-weight: 700; }
