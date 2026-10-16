@@ -701,3 +701,14 @@ html, body { overflow-x: clip; }
 .srcs li { margin: 0 0 6px; padding-left: 18px; position: relative; }
 .srcs li::before { content: ""; position: absolute; left: 0; top: .6em; width: 10px; height: 3px; background: var(--carbon); }
 .srcs a { font-weight: 700; }
+
+/* 작가와 화자 */
+.narrator { margin-top: 56px; max-width: 1080px; }
+.narrator .strip { margin-top: 0; }
+.narrator__lead { font-size: 18px; font-weight: 600; max-width: 52rem; }
+.theory { margin: 18px 0 8px; display: grid; gap: 14px; }
+.theory > div { display: grid; grid-template-columns: 300px 1fr; gap: 22px; padding: 14px 0; border-top: 2px solid var(--carbon); }
+.theory dt { display: flex; align-items: center; gap: 12px; font-weight: 900; font-size: 17px; }
+.theory dt .chip { font-size: 15px; height: 30px; min-width: 52px; }
+.theory dd { margin: 0; }
+@media (max-width: 900px) { .theory > div { grid-template-columns: 1fr; gap: 8px; } }
