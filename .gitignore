@@ -7,3 +7,10 @@ Thumbs.db
 .playwright-mcp/
 *.png
 !img/*.png
+
+.vercel
+
+# impeccable 작업물: 방향 계약과 설정만 커밋
+.impeccable/*
+!.impeccable/surfaces/
+!.impeccable/config.json

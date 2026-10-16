@@ -136,19 +136,52 @@
       }
       bar.style.width = (done / boxes.length) * 100 + "%";
     });
+    paintBoard();
   }
 
+  /* 지금 챕터는 하나뿐이다: 화면 위 30% 읽는 선을 지나간 마지막 챕터. */
   function spy() {
-    if (!("IntersectionObserver" in window)) return;
     var items = {};
     document.querySelectorAll(".rail__item").forEach(function (li) { items[li.dataset.for] = li; });
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        var li = items[e.target.id];
-        if (li) li.classList.toggle("is-here", e.isIntersecting);
-      });
-    }, { rootMargin: "-84px 0px -62% 0px" });
-    parts.forEach(function (p) { io.observe(p); });
+    var ticking = false;
+    var front = document.querySelector(".front");
+    var mini = document.querySelector(".mini");
+    function pick() {
+      ticking = false;
+      var line = window.innerHeight * 0.3, current = parts[0];
+      parts.forEach(function (p) { if (p.getBoundingClientRect().top <= line) current = p; });
+      Object.keys(items).forEach(function (id) { items[id].classList.toggle("is-here", current && current.id === id); });
+      /* 첫 화면이 지나가면 따라오는 작은 안내판을 켠다 */
+      if (mini && front) mini.classList.toggle("is-on", front.getBoundingClientRect().bottom < 0);
+      paintBoard();
+    }
+    window.addEventListener("scroll", function () {
+      if (!ticking) { ticking = true; requestAnimationFrame(pick); }
+    }, { passive: true });
+    window.addEventListener("resize", pick);
+    pick();
+  }
+
+  /* ── 오늘의 길 안내판: 지금 · 완료 · 해당 없음 · 대기 ──
+     상태는 색만이 아니라 선의 꼴(줄 긋기)로도 말한다. */
+  function paintBoard() {
+    var track = document.body.dataset.track || "";
+    document.querySelectorAll(".brow[data-board-for]").forEach(function (row) {
+      var id = row.dataset.boardFor;
+      var li = document.querySelector('.rail__item[data-for="' + id + '"]');
+      var sec = document.getElementById(id);
+      var boxes = sec ? sec.querySelectorAll("input[type=checkbox][data-progress]") : [];
+      var done = boxes.length > 0;
+      boxes.forEach(function (b) { if (!b.checked) done = false; });
+      var here = !!(li && li.classList.contains("is-here"));
+      var other = !!(track && row.dataset.track && row.dataset.track !== track);
+      row.classList.toggle("is-here", here && !other);
+      row.classList.toggle("is-done", done && !here);
+      row.classList.toggle("is-other", other);
+      var st = row.querySelector(".brow__st");
+      if (st) st.textContent = other ? "해당 없음" : here ? "지금" : done ? "완료" : "대기";
+      if (here && !other) row.setAttribute("aria-current", "step"); else row.removeAttribute("aria-current");
+    });
   }
 
   /* ── 자리(A/B) — 다른 자리 챕터를 옅게 ── */
@@ -156,6 +189,7 @@
     var picked = document.querySelector('input[name="track"]:checked');
     if (picked) document.body.dataset.track = picked.value;
     else delete document.body.dataset.track;
+    paintBoard();
   }
 
   /* ── 고른 질문을 챕터 4로 옮기기 ── */
@@ -196,7 +230,7 @@
     var point = val("r" + n + "-point");
     var q = val("r" + n + "-q");
     if (help) lines.push("도움받고 싶다고 하신 곳: " + help);
-    if (point) lines.push("제가 짚은 자리: " + point);
+    if (point) lines.push("제가 머문 자리: " + point);
     if (q) lines.push("제 질문: " + q);
     return lines.length > 1 ? lines.join("\n") : "";
   }
@@ -206,7 +240,7 @@
       var n = btn.getAttribute("data-copy-slot");
       var msg = document.querySelector('[data-copy-msg="' + n + '"]');
       var text = slotMemo(n);
-      if (!text) { if (msg) msg.textContent = "짚은 자리나 질문을 먼저 적어 주세요."; return; }
+      if (!text) { if (msg) msg.textContent = "머문 자리나 질문을 먼저 적어 주세요."; return; }
       copyText(text, function (ok) {
         if (msg) msg.textContent = ok
           ? "복사했습니다. 메신저나 쪽지로 건네세요."
@@ -281,9 +315,9 @@
       say: "「어떤 글인지 한 줄, 도움받고 싶은 곳 하나를 말씀해 주세요.」" },
     { label: "쓴 사람 · 소리 내 읽기", sec: 120,
       say: "「읽어 주세요. 듣는 분들은 마음에 남는 줄에 표시해 두세요.」" },
-    { label: "읽는 사람 · 짚기", sec: 120,
+    { label: "읽는 사람 · 머문 자리", sec: 120,
       say: "「마음에 남은 낱말이나 장면을 한 분씩, 어느 줄인지도 함께요.」" },
-    { label: "읽는 사람 · 되비추기", sec: 90,
+    { label: "읽는 사람 · 들린 이야기", sec: 90,
       say: "「제게는 ~로 들렸어요」로 말씀해 주세요." },
     { label: "읽는 사람 · 이끄는 질문 (쓴 사람은 받아 적기)", sec: 180,
       say: "「도움받고 싶다고 하신 곳에 대해 질문해 주세요. 쓰신 분은 받아 적기만 하세요.」" },

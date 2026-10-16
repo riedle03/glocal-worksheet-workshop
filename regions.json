@@ -1,0 +1,292 @@
+{
+ "regions": [
+  {
+   "id": "ground",
+   "kind": "texture",
+   "grid": "E0:E0",
+   "note": "lit goldenrod ground with a faint mottled print grain, no ink"
+  },
+  {
+   "id": "masthead",
+   "kind": "text",
+   "grid": "A0:D0",
+   "note": "workshop title 원고 합평 워크숍 in heavy black condensed gothic"
+  },
+  {
+   "id": "act-print",
+   "kind": "control",
+   "box": {
+    "x": 0.5889,
+    "y": 0.0356,
+    "w": 0.1111,
+    "h": 0.0578
+   },
+   "note": "carbon parallelogram slab button 인쇄·PDF, ivory text"
+  },
+  {
+   "id": "act-export",
+   "kind": "control",
+   "box": {
+    "x": 0.7,
+    "y": 0.0356,
+    "w": 0.1542,
+    "h": 0.0578
+   },
+   "note": "carbon parallelogram slab button 텍스트로 내보내기, ivory text"
+  },
+  {
+   "id": "act-reset",
+   "kind": "control",
+   "box": {
+    "x": 0.8542,
+    "y": 0.0356,
+    "w": 0.1236,
+    "h": 0.0578
+   },
+   "note": "outline-only parallelogram slab 전체 지우기, black stroke and text, set apart"
+  },
+  {
+   "id": "tick-rail",
+   "kind": "chrome",
+   "box": {
+    "x": 0.0264,
+    "y": 0.1111,
+    "w": 0.9486,
+    "h": 0.0533
+   },
+   "note": "black horizontal rule with ticks 1 to 5 and a bottle-green raked chip holding 0 at the left"
+  },
+  {
+   "id": "headline",
+   "kind": "text",
+   "box": {
+    "x": 0.0292,
+    "y": 0.1833,
+    "w": 0.3472,
+    "h": 0.2778
+   },
+   "note": "two-line giant heavy condensed headline 질문으로 / 고쳐 쓰기 in black"
+  },
+  {
+   "id": "lede",
+   "kind": "text",
+   "box": {
+    "x": 0.0306,
+    "y": 0.4722,
+    "w": 0.3514,
+    "h": 0.0444
+   },
+   "note": "bold line 점수 대신 질문을, 말 대신 글로 답합니다 in black"
+  },
+  {
+   "id": "choice-a",
+   "kind": "control",
+   "box": {
+    "x": 0.025,
+    "y": 0.5311,
+    "w": 0.3806,
+    "h": 0.0822
+   },
+   "note": "filled carbon parallelogram slab with ivory text A · 원고를 냈습니다"
+  },
+  {
+   "id": "choice-b",
+   "kind": "control",
+   "box": {
+    "x": 0.025,
+    "y": 0.6222,
+    "w": 0.375,
+    "h": 0.08
+   },
+   "note": "outline parallelogram slab with black text B · 아직 쓰는 중입니다"
+  },
+  {
+   "id": "name-label",
+   "kind": "text",
+   "box": {
+    "x": 0.0306,
+    "y": 0.72,
+    "w": 0.0347,
+    "h": 0.0333
+   },
+   "note": "small bold label 이름"
+  },
+  {
+   "id": "name-input",
+   "kind": "control",
+   "box": {
+    "x": 0.0264,
+    "y": 0.7556,
+    "w": 0.35,
+    "h": 0.0733
+   },
+   "note": "ivory raked input pane with grey placeholder 이름을 적어 주세요 and a thin underline"
+  },
+  {
+   "id": "board",
+   "kind": "chrome",
+   "container": true,
+   "box": {
+    "x": 0.3931,
+    "y": 0.1733,
+    "w": 0.5944,
+    "h": 0.6578
+   },
+   "note": "large carbon departures board slab raked about 11 degrees"
+  },
+  {
+   "id": "board-title",
+   "kind": "text",
+   "box": {
+    "x": 0.4917,
+    "y": 0.1978,
+    "w": 0.2028,
+    "h": 0.0778
+   },
+   "note": "goldenrod heavy condensed title 오늘의 길 on the carbon board, with a goldenrod rule under it"
+  },
+  {
+   "id": "board-head",
+   "kind": "chrome",
+   "box": {
+    "x": 0.4708,
+    "y": 0.3022,
+    "w": 0.4806,
+    "h": 0.0467
+   },
+   "note": "slate header strip with column labels 순서 챕터 누가 상태 in ivory"
+  },
+  {
+   "id": "row-0",
+   "kind": "control",
+   "box": {
+    "x": 0.4639,
+    "y": 0.3578,
+    "w": 0.4792,
+    "h": 0.0556
+   },
+   "note": "board row: green code chip 00, 약속, 함께, green status chip 지금"
+  },
+  {
+   "id": "row-1",
+   "kind": "control",
+   "box": {
+    "x": 0.4583,
+    "y": 0.4222,
+    "w": 0.4764,
+    "h": 0.0556
+   },
+   "note": "board row: slate chip 01, 질문 연습, 함께, 대기, goldenrod hairline under"
+  },
+  {
+   "id": "row-2",
+   "kind": "control",
+   "box": {
+    "x": 0.4514,
+    "y": 0.4867,
+    "w": 0.4792,
+    "h": 0.0578
+   },
+   "note": "board row: vermilion chip 02, 합평 원, A 자리, 대기"
+  },
+  {
+   "id": "row-3",
+   "kind": "control",
+   "box": {
+    "x": 0.4444,
+    "y": 0.5522,
+    "w": 0.4792,
+    "h": 0.0578
+   },
+   "note": "board row: slate chip 03, 질문 사다리, B 자리, 대기"
+  },
+  {
+   "id": "row-4",
+   "kind": "control",
+   "box": {
+    "x": 0.4375,
+    "y": 0.6178,
+    "w": 0.4792,
+    "h": 0.06
+   },
+   "note": "board row: goldenrod chip 04, 글로 답하기, 함께, 대기"
+  },
+  {
+   "id": "row-5",
+   "kind": "control",
+   "box": {
+    "x": 0.4306,
+    "y": 0.6844,
+    "w": 0.4792,
+    "h": 0.06
+   },
+   "note": "board row: ivory chip 05, 마무리, 함께, 대기"
+  },
+  {
+   "id": "promises-head",
+   "kind": "text",
+   "box": {
+    "x": 0.0306,
+    "y": 0.8533,
+    "w": 0.1181,
+    "h": 0.0378
+   },
+   "note": "bold label 함께 지킬 약속"
+  },
+  {
+   "id": "promise-1",
+   "kind": "control",
+   "box": {
+    "x": 0.0222,
+    "y": 0.8933,
+    "w": 0.1931,
+    "h": 0.0889
+   },
+   "note": "ivory raked card with black outline: 01 and a promise line"
+  },
+  {
+   "id": "promise-2",
+   "kind": "control",
+   "box": {
+    "x": 0.2097,
+    "y": 0.8933,
+    "w": 0.1958,
+    "h": 0.0889
+   },
+   "note": "ivory raked card with black outline: 02 and a promise line"
+  },
+  {
+   "id": "promise-3",
+   "kind": "control",
+   "box": {
+    "x": 0.4,
+    "y": 0.8933,
+    "w": 0.1958,
+    "h": 0.0889
+   },
+   "note": "ivory raked card with black outline: 03 and a promise line"
+  },
+  {
+   "id": "promise-4",
+   "kind": "control",
+   "box": {
+    "x": 0.5889,
+    "y": 0.8933,
+    "w": 0.1958,
+    "h": 0.0889
+   },
+   "note": "ivory raked card with black outline: 04 and a promise line"
+  },
+  {
+   "id": "promise-5",
+   "kind": "control",
+   "box": {
+    "x": 0.7778,
+    "y": 0.8933,
+    "w": 0.2014,
+    "h": 0.0889
+   },
+   "note": "ivory raked card with black outline: 05 and a promise line"
+  }
+ ]
+}
