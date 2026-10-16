@@ -33,7 +33,7 @@
   <ol class="rail__list">
     <li class="rail__item" data-for="p0"><a href="#p0"><span class="rail__n">0</span><span class="rail__t">약속</span></a><span class="rail__bar" data-for="p0"><i></i></span></li>
     <li class="rail__item" data-for="p1"><a href="#p1"><span class="rail__n">1</span><span class="rail__t">질문 연습</span></a><span class="rail__bar" data-for="p1"><i></i></span></li>
-    <li class="rail__item" data-for="p2" data-track="a"><a href="#p2"><span class="rail__n">2</span><span class="rail__t">돌아가며 합평</span></a><span class="rail__bar" data-for="p2"><i></i></span></li>
+    <li class="rail__item" data-for="p2" data-track="a"><a href="#p2"><span class="rail__n">2</span><span class="rail__t">짝·모둠 합평</span></a><span class="rail__bar" data-for="p2"><i></i></span></li>
     <li class="rail__item" data-for="p3" data-track="b"><a href="#p3"><span class="rail__n">3</span><span class="rail__t">질문 사다리</span></a><span class="rail__bar" data-for="p3"><i></i></span></li>
     <li class="rail__item" data-for="p4"><a href="#p4"><span class="rail__n">4</span><span class="rail__t">글로 답하기</span></a><span class="rail__bar" data-for="p4"><i></i></span></li>
     <li class="rail__item" data-for="p5"><a href="#p5"><span class="rail__n">5</span><span class="rail__t">마무리</span></a><span class="rail__bar" data-for="p5"><i></i></span></li>
@@ -72,7 +72,7 @@
       <ol class="board__rows">
         <li><a class="brow" href="#p0" data-board-for="p0"><span class="chip chip--green">00</span><span class="brow__t">약속</span><span class="brow__who">함께</span><span class="brow__st">대기</span></a></li>
         <li><a class="brow" href="#p1" data-board-for="p1"><span class="chip chip--slate">01</span><span class="brow__t">질문 연습</span><span class="brow__who">함께</span><span class="brow__st">대기</span></a></li>
-        <li><a class="brow" href="#p2" data-board-for="p2" data-track="a"><span class="chip chip--red">02</span><span class="brow__t">돌아가며 합평</span><span class="brow__who">A 자리</span><span class="brow__st">대기</span></a></li>
+        <li><a class="brow" href="#p2" data-board-for="p2" data-track="a"><span class="chip chip--red">02</span><span class="brow__t">짝·모둠 합평</span><span class="brow__who">A 자리</span><span class="brow__st">대기</span></a></li>
         <li><a class="brow" href="#p3" data-board-for="p3" data-track="b"><span class="chip chip--slate">03</span><span class="brow__t">질문 사다리</span><span class="brow__who">B 자리</span><span class="brow__st">대기</span></a></li>
         <li><a class="brow" href="#p4" data-board-for="p4"><span class="chip chip--gold">04</span><span class="brow__t">글로 답하기</span><span class="brow__who">함께</span><span class="brow__st">대기</span></a></li>
         <li><a class="brow" href="#p5" data-board-for="p5"><span class="chip chip--ivory">05</span><span class="brow__t">마무리</span><span class="brow__who">함께</span><span class="brow__st">대기</span></a></li>
@@ -148,7 +148,7 @@
   <ol class="mini__rows">
     <li><a class="brow brow--mini" href="#p0" data-board-for="p0"><span class="chip chip--green">00</span><span class="brow__t">약속</span><span class="brow__st">대기</span></a></li>
     <li><a class="brow brow--mini" href="#p1" data-board-for="p1"><span class="chip chip--slate">01</span><span class="brow__t">질문 연습</span><span class="brow__st">대기</span></a></li>
-    <li><a class="brow brow--mini" href="#p2" data-board-for="p2" data-track="a"><span class="chip chip--red">02</span><span class="brow__t">돌아가며 합평</span><span class="brow__st">대기</span></a></li>
+    <li><a class="brow brow--mini" href="#p2" data-board-for="p2" data-track="a"><span class="chip chip--red">02</span><span class="brow__t">짝·모둠 합평</span><span class="brow__st">대기</span></a></li>
     <li><a class="brow brow--mini" href="#p3" data-board-for="p3" data-track="b"><span class="chip chip--slate">03</span><span class="brow__t">질문 사다리</span><span class="brow__st">대기</span></a></li>
     <li><a class="brow brow--mini" href="#p4" data-board-for="p4"><span class="chip chip--gold">04</span><span class="brow__t">글로 답하기</span><span class="brow__st">대기</span></a></li>
     <li><a class="brow brow--mini" href="#p5" data-board-for="p5"><span class="chip chip--ivory">05</span><span class="brow__t">마무리</span><span class="brow__st">대기</span></a></li>
@@ -260,34 +260,49 @@
 <section id="p2" data-part class="part" data-track="a">
   <header class="part__head">
     <span class="chip chip--red chip--lg">02</span>
-    <h2 class="part__title">돌아가며 합평 · 원고를 낸 분</h2>
+    <h2 class="part__title">짝·모둠 합평 · 원고를 낸 분</h2>
     <span class="part__who">A 자리</span>
   </header>
   <p class="track-note">B 자리를 고르셨다면 <a href="#p3">챕터 3</a>으로 가십시오.</p>
 
-  <h3 class="strip">시작하기 전에 · 차례와 진행</h3>
-  <p>다섯 분이 한 사람씩 돌아가며 합평을 받습니다. 한 분이 합평을 받을 때 나머지 네 분은 <b>읽는 사람</b>이 되고, 그중 한 분이 <b>진행</b>을 맡습니다.</p>
-  <ul class="plain rules">
-    <li><b>원고</b> — 읽는 분들은 쓴 분의 원고를 인쇄본이나 화면으로 펴 둡니다. 원고를 아직 받지 못했다면 시작 전에 말씀하십시오.</li>
-    <li><b>진행</b> — 첫 분의 진행은 강사가 맡습니다. 그다음부터는 <b>방금 합평을 받은 분이 다음 분의 진행</b>을 맡습니다.</li>
-    <li><b>차례</b> — 아래 차례표에 차례대로 이름을 적어 둡니다.</li>
-  </ul>
+  <p>원고를 낸 분들은 <b>짝 → 글로 답하기 → 모둠 → 전체</b> 순서로 넓혀 가며 합평합니다. 깊게 듣고 질문을 받는 일은 짝과 하고, 모둠과 전체에서는 고쳐 쓴 부분을 나눕니다.</p>
 
-  <div class="board board--flat" id="c-2o">
+  <div class="board board--flat">
     <div class="board__in">
-      <div class="board__bar"><span class="cell__n cell__n--on-dark">칸 2-0</span><h3 class="board__sub">차례표</h3></div>
-      <div class="dep-table dep-table--order" role="table" aria-label="차례표">
-        <div class="dep-row dep-row--head" role="row"><span role="columnheader">차례</span><span role="columnheader">합평 받는 분</span><span role="columnheader">진행 맡은 분</span></div>
-        <div class="dep-row" role="row"><span role="cell"><span class="chip chip--green">1</span></span><span role="cell"><input class="ink ink--dark" type="text" data-k="ord/1w" aria-label="1번째 합평 받는 분"></span><span role="cell">강사</span></div>
-        <div class="dep-row" role="row"><span role="cell"><span class="chip chip--slate">2</span></span><span role="cell"><input class="ink ink--dark" type="text" data-k="ord/2w" aria-label="2번째 합평 받는 분"></span><span role="cell" class="soft-on-dark">1번째 분</span></div>
-        <div class="dep-row" role="row"><span role="cell"><span class="chip chip--slate">3</span></span><span role="cell"><input class="ink ink--dark" type="text" data-k="ord/3w" aria-label="3번째 합평 받는 분"></span><span role="cell" class="soft-on-dark">2번째 분</span></div>
-        <div class="dep-row" role="row"><span role="cell"><span class="chip chip--slate">4</span></span><span role="cell"><input class="ink ink--dark" type="text" data-k="ord/4w" aria-label="4번째 합평 받는 분"></span><span role="cell" class="soft-on-dark">3번째 분</span></div>
-        <div class="dep-row" role="row"><span role="cell"><span class="chip chip--slate">5</span></span><span role="cell"><input class="ink ink--dark" type="text" data-k="ord/5w" aria-label="5번째 합평 받는 분"></span><span role="cell" class="soft-on-dark">4번째 분</span></div>
-      </div>
+      <h3 class="board__sub">네 단계</h3>
+      <ol class="steps7">
+        <li><span class="chip chip--green">1</span><span class="steps7__who">짝 합평</span><span>짝과 서로의 원고를 일곱 걸음으로 합평합니다. 한 사람씩, 끝나면 역할을 바꿉니다.</span></li>
+        <li><span class="chip chip--gold">2</span><span class="steps7__who">글로 답하기</span><span>받은 질문 하나를 골라 그 답을 원고에 씁니다.</span></li>
+        <li><span class="chip chip--slate">3</span><span class="steps7__who">모둠</span><span>짝 두 쌍이 모입니다. 고쳐 쓴 부분만 읽고, 다른 분들은 머문 자리와 들린 이야기만 말합니다. 새 질문은 받지 않습니다.</span></li>
+        <li><span class="chip chip--ivory">4</span><span class="steps7__who">전체</span><span>모둠마다 고쳐 쓴 문단 하나를 모두 앞에서 읽습니다. 듣는 분들은 반응하지 않고 듣기만 합니다.</span></li>
+      </ol>
     </div>
   </div>
 
-  <h3 class="strip">내 차례가 오기 전에</h3>
+  <h3 class="h">인원에 따라 이렇게 나눕니다</h3>
+  <div class="board board--flat">
+    <div class="board__in">
+      <div class="dep-table dep-table--order" role="table" aria-label="인원별 짝과 모둠">
+        <div class="dep-row dep-row--head" role="row"><span role="columnheader">원고 낸 분</span><span role="columnheader">짝</span><span role="columnheader">모둠</span></div>
+        <div class="dep-row" role="row"><span role="cell"><span class="chip chip--slate">5명</span></span><span role="cell">2 · 3 (한 팀만 셋)</span><span role="cell">다섯 분 한 모둠</span></div>
+        <div class="dep-row" role="row"><span role="cell"><span class="chip chip--slate">6명</span></span><span role="cell">2 · 2 · 2</span><span role="cell">세 분씩 두 모둠 (짝 하나가 나뉘어 앉음)</span></div>
+        <div class="dep-row" role="row"><span role="cell"><span class="chip chip--slate">7명</span></span><span role="cell">2 · 2 · 3</span><span role="cell">네 분 · 세 분 두 모둠</span></div>
+        <div class="dep-row" role="row"><span role="cell"><span class="chip chip--slate">8명</span></span><span role="cell">2 · 2 · 2 · 2</span><span role="cell">짝 두 쌍씩, 네 분 두 모둠</span></div>
+      </div>
+      <p class="soft-on-dark board__note">셋인 팀은 두 사람이 읽는 사람이 되고, 그중 한 사람이 진행합니다. 짝은 가능하면 원고를 처음 읽는 사람끼리 짓습니다.</p>
+    </div>
+  </div>
+
+  <div class="cell" id="c-2o">
+    <div class="cell__head"><span class="cell__n">칸 2-0</span><h3 class="cell__title">내 짝과 모둠</h3></div>
+    <div class="pair-fields">
+      <div class="field"><label class="field__label" for="pair-who">내 짝 (셋이면 두 분)</label><input class="ink line" type="text" id="pair-who" data-k="pair/who" placeholder="예) 김○○"></div>
+      <div class="field"><label class="field__label" for="group-who">우리 모둠</label><input class="ink line" type="text" id="group-who" data-k="pair/group" placeholder="예) 김○○ · 이○○ · 박○○"></div>
+    </div>
+    <p class="small">원고는 인쇄본이나 화면으로 짝과 서로 펴 둡니다. 원고를 아직 받지 못했다면 시작 전에 말씀하십시오.</p>
+  </div>
+
+  <h3 class="strip">1단계 · 짝 합평 준비</h3>
 
   <div class="cell" id="c-2a">
     <div class="cell__head"><span class="cell__n">칸 2-A</span><h3 class="cell__title">내 차례에 할 말</h3></div>
@@ -322,26 +337,27 @@
     </div>
   </div>
 
-  <h3 class="strip">한 사람의 합평 순서 · 일곱 걸음</h3>
+  <h3 class="strip">1단계 · 짝 합평의 순서, 일곱 걸음</h3>
+  <p>한 사람씩 일곱 걸음을 다 마치고 나서 역할을 바꿉니다. 짝이 읽는 사람이자 진행자입니다.</p>
   <div class="board board--flat">
     <div class="board__in">
       <ol class="steps7">
         <li><span class="chip chip--ivory">1</span><span class="steps7__who">쓴 사람</span><span>계기 한 줄과 도움받고 싶은 곳 하나를 말합니다. 의도 카드는 엎어 둡니다.</span></li>
         <li><span class="chip chip--ivory">2</span><span class="steps7__who">쓴 사람</span><span>고른 부분을 소리 내 읽습니다.</span></li>
-        <li><span class="chip chip--green">3</span><span class="steps7__who">읽는 사람 · 머문 자리</span><span>마음에 남은 낱말이나 장면을 하나씩 말합니다. 반드시 어느 줄인지 가리킵니다.</span></li>
-        <li><span class="chip chip--green">4</span><span class="steps7__who">읽는 사람 · 들린 이야기</span><span>"제게는 ~한 이야기로 들렸어요."</span></li>
-        <li><span class="chip chip--green">5</span><span class="steps7__who">읽는 사람 · 이끄는 질문</span><span>쓴 사람이 도움받고 싶다고 고른 부분에 대해 묻습니다. <b class="on-dark-strong">쓴 사람은 답하지 않고 받아 적습니다.</b></span></li>
+        <li><span class="chip chip--green">3</span><span class="steps7__who">짝 · 머문 자리</span><span>마음에 남은 낱말이나 장면을 하나씩 말합니다. 반드시 어느 줄인지 가리킵니다.</span></li>
+        <li><span class="chip chip--green">4</span><span class="steps7__who">짝 · 들린 이야기</span><span>"제게는 ~한 이야기로 들렸어요."</span></li>
+        <li><span class="chip chip--green">5</span><span class="steps7__who">짝 · 이끄는 질문</span><span>쓴 사람이 도움받고 싶다고 고른 부분에 대해 묻습니다. <b class="on-dark-strong">쓴 사람은 답하지 않고 받아 적습니다.</b></span></li>
         <li><span class="chip chip--ivory">6</span><span class="steps7__who">쓴 사람 · 카드 뒤집기</span><span>의도를 밝히고, 들은 것과 달랐던 점을 말하고, 가장 쓰고 싶어진 질문 하나를 고릅니다.</span></li>
-        <li><span class="chip chip--red">7</span><span class="steps7__who">읽는 사람 · 허락받은 의견</span><span>"○○에 대해 의견이 있는데 들어 보시겠어요?" 쓴 사람은 사양해도 됩니다.</span></li>
+        <li><span class="chip chip--red">7</span><span class="steps7__who">짝 · 허락받은 의견</span><span>"○○에 대해 의견이 있는데 들어 보시겠어요?" 쓴 사람은 사양해도 됩니다.</span></li>
       </ol>
     </div>
   </div>
   <p class="small">의견부터 나오면 쓴 사람은 설명하고 방어하기 시작합니다. 그래서 순서를 지킵니다.</p>
 
   <details class="fold fold--facil" id="facil">
-    <summary>진행을 맡았다면 · 걸음 안내 · 여는 말 · 말 카드</summary>
+    <summary>짝의 원고를 읽을 때 · 걸음 안내 · 여는 말 · 말 카드</summary>
     <div class="fold__body">
-      <p>진행을 맡은 분은 걸음을 하나씩 열고, 판단이 나오면 근거를 묻고, 조언이 나오면 질문으로 돌립니다. 진행을 맡은 분도 읽는 사람으로 머문 자리를 말하고 묻습니다.</p>
+      <p>짝의 차례에는 내가 읽는 사람이자 진행자입니다. 걸음을 하나씩 열고, 내 말이 판단이나 조언으로 흐르면 스스로 질문으로 바꿉니다. 셋인 팀이면 두 사람 가운데 한 사람이 진행합니다.</p>
 
       <div class="stepper no-print" id="stepper">
         <div class="stepper__top">
@@ -359,7 +375,7 @@
         <p class="stepper__msg" id="st-msg" aria-live="polite"></p>
       </div>
 
-      <h4 class="h4">걸음마다 여는 말</h4>
+      <h4 class="h4">걸음마다 여는 말 (셋인 팀에서 진행할 때)</h4>
       <dl class="say-list">
         <div><dt>1 · 계기와 도움받을 곳</dt><dd>"○○ 선생님 차례입니다. 어떤 글인지 한 줄, 도움받고 싶은 곳 하나를 말씀해 주세요."</dd></div>
         <div><dt>2 · 소리 내 읽기</dt><dd>"읽어 주세요. 듣는 분들은 마음에 남는 줄에 표시해 두세요."</dd></div>
@@ -382,8 +398,8 @@
     </div>
   </details>
 
-  <h3 class="strip">다른 분 차례에 · 읽는 사람으로</h3>
-  <p>다섯 번 가운데 네 번은 읽는 사람입니다. 막히면 아래 세 가지 말틀 가운데 하나를 꺼내 씁니다.</p>
+  <h3 class="strip">1단계 · 짝의 차례에, 읽는 사람으로</h3>
+  <p>짝의 원고를 읽을 때 막히면 아래 세 가지 말틀 가운데 하나를 꺼내 씁니다.</p>
   <div class="moves">
     <div class="move"><span class="chip chip--green">머문 자리</span><span>"「○○」에서 멈췄어요."</span></div>
     <div class="move"><span class="chip chip--gold">들린 이야기</span><span>"제게는 ~한 이야기로 들렸어요."</span></div>
@@ -391,8 +407,8 @@
   </div>
 
   <div class="cell" id="c-2c">
-    <div class="cell__head"><span class="cell__n">칸 2-C</span><h3 class="cell__title">읽는 사람 메모 · 네 분</h3></div>
-    <p class="cell__hint">머문 자리와 질문을 적어 두었다가, 그분의 합평이 끝나면 <b>메모 복사</b>를 눌러 메신저나 쪽지로 건넵니다. 쓴 분은 질문을 들은 그대로 받게 되고, 받아 적기 부담을 덥니다.</p>
+    <div class="cell__head"><span class="cell__n">칸 2-C</span><h3 class="cell__title">짝에게 건넬 메모</h3></div>
+    <p class="cell__hint">머문 자리와 질문을 적어 두었다가, 짝의 합평이 끝나면 <b>메모 복사</b>를 눌러 메신저나 쪽지로 건넵니다. 짝은 질문을 들은 그대로 받게 되고, 받아 적기 부담을 덥니다. 셋인 팀이면 두 번째 칸도 씁니다.</p>
     <div class="slot" id="c-2c-1">
       <span class="chip chip--slate slot__n">1</span>
       <div class="slot__grid">
@@ -413,39 +429,19 @@
       <div class="field"><label class="field__label" for="r2-q">내 질문</label><textarea class="ink" id="r2-q" data-k="r/2/q" rows="2" placeholder="예) 라디오 소리가 났을 때 화자는 몇 걸음쯤 떨어져 있었어요?"></textarea></div>
       <div class="mk no-print"><button class="slab slab--small" type="button" data-copy-slot="2">이분께 건넬 메모 복사</button><span class="small" data-copy-msg="2"></span></div>
     </div>
-    <div class="slot" id="c-2c-3">
-      <span class="chip chip--slate slot__n">3</span>
-      <div class="slot__grid">
-        <div class="field"><label class="field__label" for="r3-who">쓴 분</label><input class="ink line" type="text" id="r3-who" data-k="r/3/who" placeholder="이름"></div>
-        <div class="field"><label class="field__label" for="r3-help">도움받고 싶다고 한 곳</label><input class="ink line" type="text" id="r3-help" data-k="r/3/help" placeholder="예) 셋째 문단 대문 장면"></div>
-      </div>
-      <div class="field"><label class="field__label" for="r3-point">내가 머문 자리</label><textarea class="ink" id="r3-point" data-k="r/3/point" rows="1" placeholder="예) 「개 조심」에서 멈췄어요"></textarea></div>
-      <div class="field"><label class="field__label" for="r3-q">내 질문</label><textarea class="ink" id="r3-q" data-k="r/3/q" rows="2" placeholder="예) 라디오 소리가 났을 때 화자는 몇 걸음쯤 떨어져 있었어요?"></textarea></div>
-      <div class="mk no-print"><button class="slab slab--small" type="button" data-copy-slot="3">이분께 건넬 메모 복사</button><span class="small" data-copy-msg="3"></span></div>
-    </div>
-    <div class="slot" id="c-2c-4">
-      <span class="chip chip--slate slot__n">4</span>
-      <div class="slot__grid">
-        <div class="field"><label class="field__label" for="r4-who">쓴 분</label><input class="ink line" type="text" id="r4-who" data-k="r/4/who" placeholder="이름"></div>
-        <div class="field"><label class="field__label" for="r4-help">도움받고 싶다고 한 곳</label><input class="ink line" type="text" id="r4-help" data-k="r/4/help" placeholder="예) 셋째 문단 대문 장면"></div>
-      </div>
-      <div class="field"><label class="field__label" for="r4-point">내가 머문 자리</label><textarea class="ink" id="r4-point" data-k="r/4/point" rows="1" placeholder="예) 「개 조심」에서 멈췄어요"></textarea></div>
-      <div class="field"><label class="field__label" for="r4-q">내 질문</label><textarea class="ink" id="r4-q" data-k="r/4/q" rows="2" placeholder="예) 라디오 소리가 났을 때 화자는 몇 걸음쯤 떨어져 있었어요?"></textarea></div>
-      <div class="mk no-print"><button class="slab slab--small" type="button" data-copy-slot="4">이분께 건넬 메모 복사</button><span class="small" data-copy-msg="4"></span></div>
-    </div>
   </div>
 
-  <h3 class="strip">내 차례에</h3>
-  <p>읽는 분들이 하는 말을 받아 적습니다. 따지거나 설명하지 않습니다. <b>내 뜻과 다르게 읽혔다면, 그곳이 고칠 곳을 알려 줍니다.</b> 질문을 다 받아 적지 못해도 괜찮습니다. 읽는 분들이 끝나고 메모로 건넵니다.</p>
+  <h3 class="strip">1단계 · 내 차례에</h3>
+  <p>짝이 하는 말을 받아 적습니다. 따지거나 설명하지 않습니다. <b>내 뜻과 다르게 읽혔다면, 그곳이 고칠 곳을 알려 줍니다.</b> 질문을 다 받아 적지 못해도 괜찮습니다. 짝이 끝나고 메모로 건넵니다.</p>
 
   <div class="cell" id="c-2d">
     <div class="cell__head"><span class="cell__n">칸 2-D</span><h3 class="cell__title">받아 적기</h3></div>
     <div class="field">
-      <label class="field__label" for="a-point">읽는 분들이 머문 자리 (낱말 · 장면)</label>
-      <textarea class="ink" id="a-point" data-k="a/point" rows="2" placeholder="예) 「개 조심」 손글씨 — 두 분이 멈춤"></textarea>
+      <label class="field__label" for="a-point">짝이 머문 자리 (낱말 · 장면)</label>
+      <textarea class="ink" id="a-point" data-k="a/point" rows="2" placeholder="예) 「개 조심」 손글씨"></textarea>
     </div>
     <div class="field">
-      <label class="field__label" for="a-sayback">들린 이야기 (읽는 분들의 말)</label>
+      <label class="field__label" for="a-sayback">들린 이야기 (짝의 말)</label>
       <textarea class="ink" id="a-sayback" data-k="a/sayback" rows="2" placeholder="예) 오래된 동네가 아니라 지금 사는 사람 이야기로 들렸다"></textarea>
     </div>
     <div class="field">
@@ -454,7 +450,7 @@
     </div>
     <div class="field">
       <label class="field__label" for="a-gap">카드를 뒤집고 — 내 의도와 달리 읽힌 곳</label>
-      <textarea class="ink" id="a-gap" data-k="a/gap" rows="2" placeholder="예) 나는 골목의 역사를 쓰고 싶었는데, 다들 할머니 장면에서 멈췄다"></textarea>
+      <textarea class="ink" id="a-gap" data-k="a/gap" rows="2" placeholder="예) 나는 골목의 역사를 쓰고 싶었는데, 짝은 할머니 장면에서 멈췄다"></textarea>
     </div>
     <div class="field field--pick">
       <label class="field__label" for="a-chosen"><span class="tag tag--no">고를 것</span> 가장 쓰고 싶어진 질문 <b>하나</b></label>
@@ -463,11 +459,29 @@
     <p class="small">고른 질문은 <a href="#p4">챕터 4</a>에 그대로 옮겨집니다. 거기서 글로 답합니다.</p>
   </div>
 
+  <h3 class="strip">2단계 · 글로 답하기</h3>
+  <p>짝 합평에서 고른 질문 하나의 답을 <a href="#c-4a">칸 4-A</a>에 씁니다. 설명이 아니라 장면으로, 원고에 그대로 넣을 수 있게 씁니다. 다 쓰면 모둠으로 갑니다.</p>
+
+  <h3 class="strip">3단계 · 모둠</h3>
+  <p>짝 두 쌍이 모여 모둠이 됩니다(위 인원표). 한 사람씩 돌아가며 아래 순서로 합니다. <b>새 질문은 받지 않습니다.</b> 질문은 짝 합평에서 이미 받았습니다.</p>
+  <ol class="plain rules">
+    <li><b>①</b> 쓴 사람이 짝에게서 받은 질문 하나를 한 줄로 말합니다.</li>
+    <li><b>②</b> 그 질문에 답해 고쳐 쓴 부분을 소리 내 읽습니다.</li>
+    <li><b>③</b> 다른 분들은 <b>머문 자리</b>와 <b>들린 이야기</b>만 말합니다.</li>
+  </ol>
+  <div class="cell" id="c-2e">
+    <div class="cell__head"><span class="cell__n">칸 2-E</span><h3 class="cell__title">모둠에서 들은 말</h3></div>
+    <textarea class="ink" id="a-group" data-k="a/group" rows="3" placeholder="예) 「할머니가 대문을 밀던」 장면에서 두 분이 멈췄다. 고친 뒤 대문이 더 잘 보인다고 했다."></textarea>
+  </div>
+
+  <h3 class="strip">4단계 · 전체</h3>
+  <p>모둠마다 고쳐 쓴 문단 하나를 골라 모두 앞에서 읽습니다. 듣는 분들은 반응하지 않고 듣기만 합니다. 읽을 문장은 <a href="#c-4b">칸 4-B</a>에 골라 둡니다.</p>
+
   <div class="done">
     <p class="done__t">이 챕터 완료</p>
-    <label class="chk"><input type="checkbox" data-progress data-k="p2/d1"><span>내 차례에 받은 질문을 받아 적었습니다</span></label>
-    <label class="chk"><input type="checkbox" data-progress data-k="p2/d2"><span>의도 카드를 뒤집고, 쓰고 싶어진 질문 하나를 골랐습니다</span></label>
-    <label class="chk"><input type="checkbox" data-progress data-k="p2/d3"><span>읽는 사람으로 머문 자리와 질문을 쓴 분들께 건넸습니다</span></label>
+    <label class="chk"><input type="checkbox" data-progress data-k="p2/d1"><span>짝 합평에서 받은 질문을 받아 적고, 하나를 골랐습니다</span></label>
+    <label class="chk"><input type="checkbox" data-progress data-k="p2/d2"><span>짝에게 머문 자리와 질문을 메모로 건넸습니다</span></label>
+    <label class="chk"><input type="checkbox" data-progress data-k="p2/d3"><span>모둠에서 고쳐 쓴 부분을 읽고 들었습니다</span></label>
   </div>
 </section>
 

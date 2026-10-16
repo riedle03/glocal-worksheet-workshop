@@ -312,19 +312,19 @@
      넘기는 것은 진행을 맡은 사람이 정한다. */
   var STEPS = [
     { label: "쓴 사람 · 계기와 도움받을 곳", sec: 30,
-      say: "「어떤 글인지 한 줄, 도움받고 싶은 곳 하나를 말씀해 주세요.」" },
+      say: "쓴 사람: 어떤 글인지 한 줄, 도움받고 싶은 곳 하나를 말합니다." },
     { label: "쓴 사람 · 소리 내 읽기", sec: 120,
-      say: "「읽어 주세요. 듣는 분들은 마음에 남는 줄에 표시해 두세요.」" },
-    { label: "읽는 사람 · 머문 자리", sec: 120,
-      say: "「마음에 남은 낱말이나 장면을 한 분씩, 어느 줄인지도 함께요.」" },
-    { label: "읽는 사람 · 들린 이야기", sec: 90,
-      say: "「제게는 ~로 들렸어요」로 말씀해 주세요." },
-    { label: "읽는 사람 · 이끄는 질문 (쓴 사람은 받아 적기)", sec: 180,
-      say: "「도움받고 싶다고 하신 곳에 대해 질문해 주세요. 쓰신 분은 받아 적기만 하세요.」" },
+      say: "쓴 사람이 고른 부분을 읽고, 짝은 마음에 남는 줄에 표시합니다." },
+    { label: "짝 · 머문 자리", sec: 90,
+      say: "짝: 마음에 남은 낱말이나 장면을 말합니다. 어느 줄인지도 함께." },
+    { label: "짝 · 들린 이야기", sec: 60,
+      say: "짝: 「제게는 ~한 이야기로 들렸어요」로 말합니다." },
+    { label: "짝 · 이끄는 질문 (쓴 사람은 받아 적기)", sec: 180,
+      say: "짝: 쓴 사람이 고른 부분에 대해 묻습니다. 쓴 사람은 답하지 않고 받아 적습니다." },
     { label: "쓴 사람 · 카드 뒤집기", sec: 120,
-      say: "「카드를 뒤집어 주세요. 무엇을 쓰고 싶으셨는지, 들은 것과 무엇이 달랐는지요.」" },
-    { label: "읽는 사람 · 허락받은 의견", sec: 60,
-      say: "「의견이 있는 분은 먼저 들어 보실지 여쭤 주세요.」" }
+      say: "쓴 사람: 카드를 뒤집고, 무엇을 쓰고 싶었는지, 들은 것과 무엇이 달랐는지 말합니다." },
+    { label: "짝 · 허락받은 의견", sec: 60,
+      say: "짝: 의견이 있으면 「들어 보시겠어요?」 하고 먼저 여쭙니다." }
   ];
   var st = { i: 0, left: STEPS[0].sec, running: false, timer: null };
   var stepper = document.getElementById("stepper");
@@ -356,7 +356,7 @@
     stBar.style.width = Math.min(100, Math.max(0, used / step.sec * 100)) + "%";
     stepper.classList.toggle("is-over", st.left < 0);
     stPlay.textContent = st.running ? "멈춤" : (used > 0 ? "이어서" : "시작");
-    stNext.textContent = st.i === STEPS.length - 1 ? "이분 합평 마치기" : "다음 걸음";
+    stNext.textContent = st.i === STEPS.length - 1 ? "이 차례 마치기" : "다음 걸음";
   }
 
   function tick() {
@@ -384,7 +384,7 @@
       stop();
       st.i = 0;
       st.left = STEPS[0].sec;
-      if (stMsg) stMsg.textContent = "한 분의 합평을 마쳤습니다. 다음 분 차례에 「시작」을 누르세요.";
+      if (stMsg) stMsg.textContent = "한 사람의 차례를 마쳤습니다. 역할을 바꿔 「시작」을 누르세요.";
       paint();
       return;
     }

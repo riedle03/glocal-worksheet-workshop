@@ -712,3 +712,9 @@ html, body { overflow-x: clip; }
 .theory dt .chip { font-size: 15px; height: 30px; min-width: 52px; }
 .theory dd { margin: 0; }
 @media (max-width: 900px) { .theory > div { grid-template-columns: 1fr; gap: 8px; } }
+
+/* 짝·모둠 합평 */
+.pair-fields { display: grid; grid-template-columns: 1fr 2fr; gap: 0 22px; }
+.board__note { margin: 12px 0 0; font-size: 14px; max-width: none; }
+.dep-table--order .dep-row { grid-template-columns: 120px 1fr 1.4fr; }
+@media (max-width: 900px) { .pair-fields { grid-template-columns: 1fr; } }
