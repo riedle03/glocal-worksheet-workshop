@@ -1,0 +1,420 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-16T00:00:00+09:00",
+  "title": "Design System: 원고 합평 워크숍",
+  "extensions": {
+    "colorMeta": {
+      "bed": {
+        "role": "primary",
+        "displayName": "Lit Goldenrod Bed",
+        "canonical": "oklch(75.6% 0.148 86)",
+        "tonalRamp": [
+          "oklch(15% 0.060 86)",
+          "oklch(26% 0.089 86)",
+          "oklch(37% 0.119 86)",
+          "oklch(48% 0.148 86)",
+          "oklch(59% 0.148 86)",
+          "oklch(70% 0.148 86)",
+          "oklch(82% 0.121 86)",
+          "oklch(95% 0.087 86)"
+        ],
+        "cssVar": "--bed"
+      },
+      "bed-lit": {
+        "role": "primary",
+        "displayName": "Lamp Goldenrod",
+        "canonical": "oklch(79.0% 0.149 88)",
+        "tonalRamp": [
+          "oklch(15% 0.060 88)",
+          "oklch(26% 0.089 88)",
+          "oklch(37% 0.119 88)",
+          "oklch(48% 0.148 88)",
+          "oklch(59% 0.149 88)",
+          "oklch(70% 0.149 88)",
+          "oklch(82% 0.121 88)",
+          "oklch(95% 0.087 88)"
+        ],
+        "cssVar": "--bed-2"
+      },
+      "carbon": {
+        "role": "secondary",
+        "displayName": "Carbon",
+        "canonical": "oklch(22.2% 0.002 107)",
+        "tonalRamp": [
+          "oklch(15% 0.002 107)",
+          "oklch(26% 0.002 107)",
+          "oklch(37% 0.002 107)",
+          "oklch(48% 0.002 107)",
+          "oklch(59% 0.002 107)",
+          "oklch(70% 0.002 107)",
+          "oklch(82% 0.002 107)",
+          "oklch(95% 0.002 107)"
+        ],
+        "cssVar": "--carbon"
+      },
+      "slate": {
+        "role": "secondary",
+        "displayName": "Slate",
+        "canonical": "oklch(39.7% 0.026 253)",
+        "tonalRamp": [
+          "oklch(15% 0.026 253)",
+          "oklch(26% 0.026 253)",
+          "oklch(37% 0.026 253)",
+          "oklch(48% 0.026 253)",
+          "oklch(59% 0.026 253)",
+          "oklch(70% 0.026 253)",
+          "oklch(82% 0.026 253)",
+          "oklch(95% 0.026 253)"
+        ],
+        "cssVar": "--slate"
+      },
+      "vermilion": {
+        "role": "tertiary",
+        "displayName": "Vermilion",
+        "canonical": "oklch(50.2% 0.170 32)",
+        "tonalRamp": [
+          "oklch(15% 0.060 32)",
+          "oklch(26% 0.089 32)",
+          "oklch(37% 0.119 32)",
+          "oklch(48% 0.148 32)",
+          "oklch(59% 0.170 32)",
+          "oklch(70% 0.153 32)",
+          "oklch(82% 0.121 32)",
+          "oklch(95% 0.087 32)"
+        ],
+        "cssVar": "--red"
+      },
+      "bottle-green": {
+        "role": "tertiary",
+        "displayName": "Bottle Green",
+        "canonical": "oklch(47.0% 0.093 165)",
+        "tonalRamp": [
+          "oklch(15% 0.060 165)",
+          "oklch(26% 0.089 165)",
+          "oklch(37% 0.093 165)",
+          "oklch(48% 0.093 165)",
+          "oklch(59% 0.093 165)",
+          "oklch(70% 0.093 165)",
+          "oklch(82% 0.093 165)",
+          "oklch(95% 0.087 165)"
+        ],
+        "cssVar": "--green"
+      },
+      "ivory": {
+        "role": "neutral",
+        "displayName": "Bible Ivory",
+        "canonical": "oklch(94.7% 0.024 80)",
+        "tonalRamp": [
+          "oklch(15% 0.024 80)",
+          "oklch(26% 0.024 80)",
+          "oklch(37% 0.024 80)",
+          "oklch(48% 0.024 80)",
+          "oklch(59% 0.024 80)",
+          "oklch(70% 0.024 80)",
+          "oklch(82% 0.024 80)",
+          "oklch(95% 0.024 80)"
+        ],
+        "cssVar": "--ivory"
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "oklch(97.2% 0.016 83)",
+        "tonalRamp": [
+          "oklch(15% 0.016 83)",
+          "oklch(26% 0.016 83)",
+          "oklch(37% 0.016 83)",
+          "oklch(48% 0.016 83)",
+          "oklch(59% 0.016 83)",
+          "oklch(70% 0.016 83)",
+          "oklch(82% 0.016 83)",
+          "oklch(95% 0.016 83)"
+        ],
+        "cssVar": "--paper"
+      },
+      "ink-soft": {
+        "role": "neutral",
+        "displayName": "Soft Ink",
+        "canonical": "oklch(33.0% 0.021 88)",
+        "tonalRamp": [
+          "oklch(15% 0.021 88)",
+          "oklch(26% 0.021 88)",
+          "oklch(37% 0.021 88)",
+          "oklch(48% 0.021 88)",
+          "oklch(59% 0.021 88)",
+          "oklch(70% 0.021 88)",
+          "oklch(82% 0.021 88)",
+          "oklch(95% 0.021 88)"
+        ],
+        "cssVar": "--ink-2"
+      },
+      "hair": {
+        "role": "neutral",
+        "displayName": "Hair",
+        "canonical": "oklch(70.3% 0.138 83)",
+        "tonalRamp": [
+          "oklch(15% 0.060 83)",
+          "oklch(26% 0.089 83)",
+          "oklch(37% 0.119 83)",
+          "oklch(48% 0.138 83)",
+          "oklch(59% 0.138 83)",
+          "oklch(70% 0.138 83)",
+          "oklch(82% 0.121 83)",
+          "oklch(95% 0.087 83)"
+        ],
+        "cssVar": "--hair"
+      },
+      "muted-on-dark": {
+        "role": "neutral",
+        "displayName": "Muted on Dark",
+        "canonical": "oklch(81.5% 0.023 87)",
+        "tonalRamp": [
+          "oklch(15% 0.023 87)",
+          "oklch(26% 0.023 87)",
+          "oklch(37% 0.023 87)",
+          "oklch(48% 0.023 87)",
+          "oklch(59% 0.023 87)",
+          "oklch(70% 0.023 87)",
+          "oklch(82% 0.023 87)",
+          "oklch(95% 0.023 87)"
+        ],
+        "cssVar": "--muted-dark"
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "첫 화면 두 줄 큰 제목 하나."
+      },
+      "masthead": {
+        "displayName": "Masthead",
+        "purpose": "왼쪽 위 이름표."
+      },
+      "headline": {
+        "displayName": "Board Headline",
+        "purpose": "출발 안내판 제목, 금빛 글자 + 금빛 밑줄."
+      },
+      "headline-chapter": {
+        "displayName": "Chapter Headline",
+        "purpose": "챕터 머리·뒷장·어두운 판 소제목."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "칸 제목·약속 제목. 굵기 900."
+      },
+      "lede": {
+        "displayName": "Lede",
+        "purpose": "첫 화면 한 줄 소개."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "본문과 입력, 46rem 폭, keep-all."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "입력 이름·번호판·태그."
+      },
+      "clock": {
+        "displayName": "Clock",
+        "purpose": "진행자 시계 하나, 고정폭 숫자."
+      }
+    },
+    "shadows": [
+      {
+        "name": "focus-underline",
+        "value": "inset 0 -3px 0 var(--carbon)",
+        "purpose": "입력 포커스 때 밑줄을 굵히는 선. 번짐 없음."
+      },
+      {
+        "name": "focus-underline-dark",
+        "value": "inset 0 -3px 0 var(--bed)",
+        "purpose": "어두운 판 위 입력 포커스."
+      }
+    ],
+    "motion": [
+      {
+        "name": "click-step",
+        "value": "0.09s steps(2)",
+        "purpose": "모든 배경·투명도 상태 전환. 이징 곡선 없음."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "transition: none; scroll-behavior: auto",
+        "purpose": "움직임 줄이기 설정 존중."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "phone",
+        "value": "600px"
+      },
+      {
+        "name": "narrow",
+        "value": "900px"
+      },
+      {
+        "name": "stack",
+        "value": "1180px"
+      },
+      {
+        "name": "wide-mini-board",
+        "value": "1420px"
+      }
+    ],
+    "geometry": {
+      "rake": "-11deg (<=900px -8deg; board and chapter head <=900px -4deg; mini board -4deg)",
+      "clipK": {
+        "slab": "20px (<=900px 12px)",
+        "seatPick": "18px",
+        "promiseCard": "15px",
+        "namePane": "14px",
+        "chipLarge": "12px",
+        "chip": "9px",
+        "chipMini": "6px"
+      },
+      "clipPolygon": "polygon(var(--k) 0, 100% 0, calc(100% - var(--k)) 100%, 0 100%)",
+      "outlineInnerInset": "2px"
+    },
+    "ground": {
+      "plate": "assets/plates/ground.png",
+      "size": "576px 360px",
+      "lamp": "radial-gradient(ellipse 70% 55% at 55% 30%, rgba(255,226,120,.35), transparent 70%)",
+      "attachment": "lamp fixed, plate scroll"
+    }
+  },
+  "components": [
+    {
+      "name": "Slab Button",
+      "kind": "button",
+      "refersTo": "button-slab",
+      "description": "기본 동작 버튼. 상자 안에서 잘라 낸 탄소 평행사변형, 글자는 수평.",
+      "html": "<button class=\"ds-slab\" type=\"button\">인쇄 · PDF</button>",
+      "css": ":host{--bed:#d9a820;--bed-2:#e2b42e;--carbon:#1b1b1a;--slate:#3d4855;--ivory:#f6ecdc;--paper:#fbf5ea;--red:#b02e17;--green:#0f6b4e;--hair:#c9961c;--muted-dark:#c9c2b2;--rake:-11deg;} .ds-slab{--k:20px;position:relative;isolation:isolate;display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 26px;font-family:'Pretendard Variable',Pretendard,sans-serif;font-size:19px;font-weight:900;letter-spacing:-.01em;color:var(--ivory);background:none;border:0;cursor:pointer;} .ds-slab::before{content:'';position:absolute;inset:0;z-index:-1;background:var(--carbon);clip-path:polygon(var(--k) 0,100% 0,calc(100% - var(--k)) 100%,0 100%);transition:background .09s steps(2);} .ds-slab:hover::before{background:var(--slate);} .ds-slab:active::before{background:var(--green);} .ds-slab:focus-visible{outline:3px solid var(--carbon);outline-offset:3px;}"
+    },
+    {
+      "name": "Slab Button Line",
+      "kind": "button",
+      "refersTo": "button-slab-line",
+      "description": "물러선 동작. 탄소 바깥 판 위에 금빛 안쪽 판을 한 겹 더 놓은 테두리 판.",
+      "html": "<button class=\"ds-slab-line\" type=\"button\">전체 지우기</button>",
+      "css": ":host{--bed:#d9a820;--bed-2:#e2b42e;--carbon:#1b1b1a;--slate:#3d4855;--ivory:#f6ecdc;--paper:#fbf5ea;--red:#b02e17;--green:#0f6b4e;--hair:#c9961c;--muted-dark:#c9c2b2;--rake:-11deg;} .ds-slab-line{--k:20px;position:relative;isolation:isolate;display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 26px;font-family:'Pretendard Variable',Pretendard,sans-serif;font-size:19px;font-weight:900;color:var(--carbon);background:none;border:0;cursor:pointer;} .ds-slab-line::before{content:'';position:absolute;inset:0;z-index:-1;background:var(--carbon);clip-path:polygon(var(--k) 0,100% 0,calc(100% - var(--k)) 100%,0 100%);} .ds-slab-line::after{content:'';position:absolute;inset:2px;z-index:-1;background:var(--bed);clip-path:polygon(calc(var(--k) - 1px) 0,100% 0,calc(100% - var(--k) + 1px) 100%,0 100%);transition:background .09s steps(2);} .ds-slab-line:hover::after{background:var(--bed-2);} .ds-slab-line:focus-visible{outline:3px solid var(--carbon);outline-offset:3px;}"
+    },
+    {
+      "name": "Code Chips",
+      "kind": "chip",
+      "refersTo": "chip-code",
+      "description": "안내판의 편 번호. 다섯 색, 상태 없음.",
+      "html": "<span class=\"ds-chip\">01</span> <span class=\"ds-chip ds-chip--green\">00</span> <span class=\"ds-chip ds-chip--red\">02</span> <span class=\"ds-chip ds-chip--gold\">04</span>",
+      "css": ":host{--bed:#d9a820;--bed-2:#e2b42e;--carbon:#1b1b1a;--slate:#3d4855;--ivory:#f6ecdc;--paper:#fbf5ea;--red:#b02e17;--green:#0f6b4e;--hair:#c9961c;--muted-dark:#c9c2b2;--rake:-11deg;} .ds-chip{--k:9px;position:relative;isolation:isolate;display:inline-grid;place-items:center;min-width:50px;height:40px;padding:0 12px;font-family:'Pretendard Variable',Pretendard,sans-serif;font-size:24px;font-weight:900;color:var(--ivory);} .ds-chip::before{content:'';position:absolute;inset:0;z-index:-1;background:var(--slate);clip-path:polygon(var(--k) 0,100% 0,calc(100% - var(--k)) 100%,0 100%);} .ds-chip--green::before{background:var(--green);} .ds-chip--red::before{background:var(--red);} .ds-chip--gold{color:var(--carbon);} .ds-chip--gold::before{background:var(--bed);}"
+    },
+    {
+      "name": "Ink Input",
+      "kind": "input",
+      "refersTo": "input-ink",
+      "description": "종이 바탕, 탄소 2px 밑줄, 포커스 때 흰 바탕과 3px 안쪽 밑줄.",
+      "html": "<label class=\"ds-label\" for=\"ds-i\">원고 제목</label><input class=\"ds-ink\" id=\"ds-i\" placeholder=\"예) 골목 끝의 대문\">",
+      "css": ":host{--bed:#d9a820;--bed-2:#e2b42e;--carbon:#1b1b1a;--slate:#3d4855;--ivory:#f6ecdc;--paper:#fbf5ea;--red:#b02e17;--green:#0f6b4e;--hair:#c9961c;--muted-dark:#c9c2b2;--rake:-11deg;} .ds-label{display:block;font-family:'Pretendard Variable',Pretendard,sans-serif;font-size:15px;font-weight:800;margin:0 0 4px;color:var(--carbon);} .ds-ink{width:100%;font-family:'Pretendard Variable',Pretendard,sans-serif;font-size:17px;line-height:1.7;color:var(--carbon);background:var(--paper);border:0;border-bottom:2px solid var(--carbon);border-radius:0;padding:8px 10px;} .ds-ink::placeholder{color:#6e6555;} .ds-ink:focus{outline:none;background:#fff;box-shadow:inset 0 -3px 0 var(--carbon);}"
+    },
+    {
+      "name": "Seat Pick",
+      "kind": "custom",
+      "refersTo": "seat-pick",
+      "description": "A/B 자리 고르기. 고른 판만 탄소로 차고 나머지는 두 겹 테두리 판으로 남는다.",
+      "html": "<div class=\"ds-seats\"><label class=\"ds-seat\"><input type=\"radio\" name=\"ds-t\" checked><span>A · 원고를 냈습니다</span></label><label class=\"ds-seat\"><input type=\"radio\" name=\"ds-t\"><span>B · 아직 쓰는 중입니다</span></label></div>",
+      "css": ":host{--bed:#d9a820;--bed-2:#e2b42e;--carbon:#1b1b1a;--slate:#3d4855;--ivory:#f6ecdc;--paper:#fbf5ea;--red:#b02e17;--green:#0f6b4e;--hair:#c9961c;--muted-dark:#c9c2b2;--rake:-11deg;} .ds-seats{display:grid;gap:8px;} .ds-seat{--k:18px;position:relative;isolation:isolate;display:flex;align-items:center;min-height:72px;padding:0 22px 0 46px;cursor:pointer;color:var(--carbon);font-family:'Pretendard Variable',Pretendard,sans-serif;font-size:35px;font-weight:900;letter-spacing:-.015em;} .ds-seat input{position:absolute;opacity:0;} .ds-seat::before{content:'';position:absolute;inset:0;z-index:-1;background:var(--carbon);clip-path:polygon(var(--k) 0,100% 0,calc(100% - var(--k)) 100%,0 100%);} .ds-seat::after{content:'';position:absolute;inset:2px;z-index:-1;background:var(--bed);clip-path:polygon(calc(var(--k) - 1px) 0,100% 0,calc(100% - var(--k) + 1px) 100%,0 100%);} .ds-seat:has(input:checked){color:var(--ivory);} .ds-seat:has(input:checked)::after{display:none;} .ds-seat:has(input:focus-visible){outline:3px solid var(--carbon);outline-offset:4px;}"
+    },
+    {
+      "name": "Departures Board",
+      "kind": "card",
+      "refersTo": "departures-board",
+      "description": "서명 컴포넌트. 기울어진 탄소 판, 금빛 간판 제목, 코드 칩 행, 지금·완료·해당 없음 상태 문법.",
+      "html": "<div class=\"ds-board\"><h2 class=\"ds-board__t\">오늘의 길</h2><a class=\"ds-row\" href=\"#\"><span class=\"ds-c ds-c--g\">00</span><span class=\"ds-row__t\">약속</span><span class=\"ds-done\">완료</span></a><a class=\"ds-row\" href=\"#\"><span class=\"ds-c\">01</span><span class=\"ds-row__t\">질문 연습</span><span class=\"ds-now\">지금</span></a><a class=\"ds-row ds-row--other\" href=\"#\"><span class=\"ds-c ds-c--r\">02</span><span class=\"ds-row__t\">합평 원</span><span>해당 없음</span></a></div>",
+      "css": ":host{--bed:#d9a820;--bed-2:#e2b42e;--carbon:#1b1b1a;--slate:#3d4855;--ivory:#f6ecdc;--paper:#fbf5ea;--red:#b02e17;--green:#0f6b4e;--hair:#c9961c;--muted-dark:#c9c2b2;--rake:-11deg;} .ds-board{position:relative;isolation:isolate;color:var(--ivory);padding:22px 56px 28px 64px;font-family:'Pretendard Variable',Pretendard,sans-serif;} .ds-board::before{content:'';position:absolute;inset:0;z-index:-1;transform:skewX(var(--rake));background:var(--carbon);} .ds-board__t{font-family:'Black Han Sans',sans-serif;font-weight:400;font-size:56px;line-height:1.05;color:var(--bed);margin:0 0 6px;padding-bottom:8px;border-bottom:3px solid var(--bed);} .ds-row{display:grid;grid-template-columns:72px 1fr auto;column-gap:20px;align-items:center;min-height:54px;color:var(--ivory);text-decoration:none;border-bottom:1px solid var(--hair);font-size:22px;font-weight:700;transition:background .09s steps(2);} .ds-row:hover{background:rgba(217,168,32,.1);} .ds-row:focus-visible{outline:3px solid var(--bed-2);outline-offset:-2px;} .ds-row__t{font-size:26px;font-weight:900;letter-spacing:-.03em;} .ds-c{--k:9px;position:relative;isolation:isolate;display:inline-grid;place-items:center;min-width:52px;height:36px;font-size:20px;font-weight:900;} .ds-c::before{content:'';position:absolute;inset:0;z-index:-1;background:var(--slate);clip-path:polygon(var(--k) 0,100% 0,calc(100% - var(--k)) 100%,0 100%);} .ds-c--g::before{background:var(--green);} .ds-c--r::before{background:var(--red);} .ds-now{position:relative;isolation:isolate;padding:0 14px;} .ds-now::before{content:'';position:absolute;inset:-4px 0;z-index:-1;transform:skewX(var(--rake));background:var(--green);} .ds-done{text-decoration:line-through;text-decoration-thickness:2px;color:var(--muted-dark);} .ds-row--other{opacity:.5;} .ds-row--other .ds-row__t{text-decoration:line-through;text-decoration-thickness:2px;}"
+    },
+    {
+      "name": "Chapter Head",
+      "kind": "custom",
+      "refersTo": "chapter-head",
+      "description": "챕터 머리. 통째로 기울인 탄소 띠 위 큰 칩 + 간판 제목 + 금빛 「누가」.",
+      "html": "<header class=\"ds-part\"><span class=\"ds-pc\">01</span><h2 class=\"ds-part__t\">이끄는 질문을 만들어 봅니다</h2><span class=\"ds-part__w\">함께</span></header>",
+      "css": ":host{--bed:#d9a820;--bed-2:#e2b42e;--carbon:#1b1b1a;--slate:#3d4855;--ivory:#f6ecdc;--paper:#fbf5ea;--red:#b02e17;--green:#0f6b4e;--hair:#c9961c;--muted-dark:#c9c2b2;--rake:-11deg;} .ds-part{position:relative;isolation:isolate;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:22px;padding:16px 48px 16px 40px;color:var(--ivory);font-family:'Pretendard Variable',Pretendard,sans-serif;} .ds-part::before{content:'';position:absolute;inset:0;z-index:-1;transform:skewX(var(--rake));background:var(--carbon);} .ds-pc{--k:12px;position:relative;isolation:isolate;display:inline-grid;place-items:center;min-width:70px;height:54px;font-size:30px;font-weight:900;} .ds-pc::before{content:'';position:absolute;inset:0;z-index:-1;background:var(--slate);clip-path:polygon(var(--k) 0,100% 0,calc(100% - var(--k)) 100%,0 100%);} .ds-part__t{font-family:'Black Han Sans',sans-serif;font-weight:400;font-size:44px;line-height:1.15;margin:0;} .ds-part__w{font-size:20px;font-weight:800;color:var(--bed);}"
+    },
+    {
+      "name": "Cell",
+      "kind": "card",
+      "refersTo": "cell",
+      "description": "쓰는 칸. 상아 판 위 기울어진 탄소 머리띠, 금빛 번호판.",
+      "html": "<div class=\"ds-cell\"><div class=\"ds-cell__h\"><span class=\"ds-n\">칸 1</span><h3>받은 질문 하나</h3></div><textarea class=\"ds-ta\" placeholder=\"글로 답합니다\"></textarea></div>",
+      "css": ":host{--bed:#d9a820;--bed-2:#e2b42e;--carbon:#1b1b1a;--slate:#3d4855;--ivory:#f6ecdc;--paper:#fbf5ea;--red:#b02e17;--green:#0f6b4e;--hair:#c9961c;--muted-dark:#c9c2b2;--rake:-11deg;} .ds-cell{background:var(--ivory);padding:0 30px 26px;font-family:'Pretendard Variable',Pretendard,sans-serif;color:var(--carbon);} .ds-cell__h{position:relative;isolation:isolate;display:flex;align-items:center;gap:14px;margin:0 -30px 18px;padding:12px 30px;color:var(--ivory);} .ds-cell__h::before{content:'';position:absolute;inset:0;z-index:-1;transform:skewX(var(--rake));background:var(--carbon);} .ds-cell__h h3{font-size:22px;font-weight:900;letter-spacing:-.02em;margin:0;} .ds-n{position:relative;isolation:isolate;padding:4px 16px;font-size:15px;font-weight:900;color:var(--carbon);} .ds-n::before{content:'';position:absolute;inset:0;z-index:-1;transform:skewX(var(--rake));background:var(--bed);} .ds-ta{width:100%;min-height:3.6em;font:inherit;font-size:17px;line-height:1.7;background:var(--paper);border:0;border-bottom:2px solid var(--carbon);border-radius:0;padding:8px 10px;resize:none;} .ds-ta:focus{outline:none;background:#fff;box-shadow:inset 0 -3px 0 var(--carbon);}"
+    }
+  ],
+  "narrative": {
+    "northStar": "포켓 시간표 슬라이드",
+    "overview": "워크숍 하루를 한 장의 출발 안내판으로 읽는다. 챕터·차례·일곱 걸음이 역의 출발 편처럼 지나가고, 화면은 그 안내판을 손에 쥔 포켓 시간표처럼 짠다. 불 켜진 금빛 바탕 위에 탄소색과 슬레이트 판이 왼쪽으로 기울어 놓이고, 글을 읽고 쓰는 자리는 불투명한 상아색 판이 받친다. 크림색 종이 활동지의 둥근 카드·옆 탭 강조는 이 세계의 반대편이다.\n\n밀도는 높고 목소리는 굵다. 순위는 크기보다 **굵기·반전(어두운 판 위 밝은 글자)·줄**로 매긴다. 판은 기울어도 글자 기준선은 언제나 수평이다. 판만 기울고 글자는 똑바로 서 있는 이 어긋남이 세계의 서명이다.\n\n상태는 색이 아니라 **선의 모양**으로 말한다. 지난 편(완료)과 내 자리가 아닌 편(해당 없음)은 줄이 그어지고, 지금 편 하나만 병 초록 판을 얻는다. 움직임은 기계식 안내판처럼 두 단계로 딸깍 넘어갈 뿐 미끄러지지 않는다.",
+    "keyCharacteristics": [
+      "금빛 바탕(종이결 타일 + 램프 빛 한 겹) 위의 탄소·슬레이트 기울어진 판",
+      "큰 판은 통째로 기울이고, 손에 닿는 작은 판은 상자 안에서 평행사변형으로 잘라 낸다",
+      "글자 기준선은 언제나 수평",
+      "버밀리언·병 초록은 코드 칩과 상태 표시에만",
+      "둥근 모서리 0, 번진 그림자 0, 그라디언트는 램프 빛 하나",
+      "움직임은 steps(2) 약 90ms의 딸깍 전환뿐"
+    ],
+    "rules": [
+      {
+        "name": "The Signal Only Rule",
+        "body": "버밀리언과 병 초록은 코드 칩·태그·상태 표시에만 산다. 판 바탕, 제목 글자, 입력칸 테두리에 쓰지 않는다(입력칸을 빨강 밑줄로 표시하던 시도는 탄소 3px 밑줄로 되돌렸다).",
+        "section": "colors"
+      },
+      {
+        "name": "The One Now Rule",
+        "body": "초록 「지금」은 한 화면에 한 편뿐이다. 화면 위 30% 읽는 선을 지난 마지막 챕터가 지금이고, 레일과 안내판이 같은 하나를 가리킨다.",
+        "section": "colors"
+      },
+      {
+        "name": "The Lamp Only Rule",
+        "body": "그라디언트는 바탕의 램프 빛(가운데가 조금 밝은 타원 하나) 하나뿐이다.",
+        "section": "colors"
+      },
+      {
+        "name": "The Weight Ladder Rule",
+        "body": "본문 서체 안에서 순위는 400 → 600 → 700 → 800 → 900의 굵기로 올린다. 대문자·자간 벌리기·작은 윗글(키커)로 순위를 만들지 않는다.",
+        "section": "typography"
+      },
+      {
+        "name": "The Display Is Sign Rule",
+        "body": "Black Han Sans는 안내판의 간판 글자다. 큰 제목·판 제목·챕터 제목·시계에만 쓰고 본문·버튼·칩에는 쓰지 않는다.",
+        "section": "typography"
+      },
+      {
+        "name": "The Stacked Plate Rule",
+        "body": "무언가를 앞으로 꺼내려면 판을 한 겹 더 놓는다. box-shadow 번짐, 떠 있는 카드, 오프셋 그림자는 쓰지 않는다.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Flat Baseline Rule",
+        "body": "판은 기울어도 글자는 기울지 않는다. 기울기·자르기는 언제나 뒤에 깐 층(::before / ::after)에만 걸고, 글자를 담은 요소 자체에 skew를 걸지 않는다.",
+        "section": "shapes"
+      },
+      {
+        "name": "The Hand-Sized Clip Rule",
+        "body": "손으로 누르거나 고르는 판은 자기 상자 밖으로 삐져나오지 않는다. 기울이지 말고 잘라 낸다.",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "**Do** 판을 기울일 때는 뒤에 깐 층에만 `skewX(var(--rake))`를 걸고 글자는 수평으로 둔다.",
+      "**Do** 버튼·자리판·칩·카드처럼 손에 닿는 작은 판은 `--k` 네 점 `clip-path`로 상자 안에서 자르고, 테두리는 안쪽 판을 한 겹 더 놓아 만든다.",
+      "**Do** 상태는 줄(완료·해당 없음)과 초록 「지금」 하나로 보여 준다.",
+      "**Do** 순위는 굵기(400–900), 어두운 판 반전, 2–3px 탄소 줄로 매긴다.",
+      "**Do** 글과 입력은 상아·종이 판 위에 둔다. 금빛 땅에 직접 긴 글을 깔지 않는다.",
+      "**Do** 전환은 `steps(2)` 약 90ms로 딸깍 넘긴다."
+    ],
+    "donts": [
+      "**Don't** 둥근 모서리, 번진 그림자, 램프 빛 외의 그라디언트를 쓰지 않는다.",
+      "**Don't** 버밀리언·병 초록을 판 바탕·제목 글자·입력 테두리에 쓰지 않는다.",
+      "**Don't** 글자를 담은 요소 자체를 기울이거나, 작은 판을 skew로 상자 밖까지 삐져나오게 하지 않는다.",
+      "**Don't** 제목 위 작은 윗글(키커), 대문자·자간 벌리기로 순위를 만들지 않는다.",
+      "**Don't** 이징 곡선으로 미끄러지는 움직임을 넣지 않는다."
+    ]
+  }
+}

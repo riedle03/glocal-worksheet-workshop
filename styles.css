@@ -84,7 +84,7 @@ p { margin: 0 0 14px; max-width: var(--measure); }
 }
 .saved {
   margin: 30px 0 0 auto; font-size: 14px; font-weight: 700; color: var(--carbon);
-  opacity: 0; transition: opacity .3s steps(2);
+  opacity: 0; transition: opacity .09s steps(2);
 }
 .saved.on { opacity: 1; }
 .acts { display: flex; gap: 0; margin-top: 16px; margin-right: -19px; }
@@ -458,7 +458,7 @@ textarea.ink { min-height: 3.6em; background: var(--paper); }
 .stepper__idx { font-weight: 900; color: var(--bed); font-size: 18px; }
 .stepper__label { font-family: var(--display); font-size: 32px; line-height: 1.2; }
 .stepper__clock { font-family: var(--display); font-size: 48px; font-variant-numeric: tabular-nums; color: var(--bed); }
-.stepper.is-over .stepper__clock { color: #ef8a6c; }
+.stepper.is-over .stepper__clock { color: var(--ivory); }
 .stepper__say { margin: 6px 0 0; color: var(--muted-dark); font-size: 17px; max-width: none; }
 .stepper__bar { height: 6px; margin: 16px 0; background: rgba(246, 236, 220, .16); }
 .stepper__bar i { display: block; height: 100%; width: 0; background: var(--bed); }
