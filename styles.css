@@ -722,3 +722,6 @@ html, body { overflow-x: clip; }
 .why-better { margin-top: 14px; }
 .why-better .h4 { margin-top: 0; }
 .why-better .redo dt { display: flex; align-items: center; gap: 10px; }
+
+.read-why { margin-top: 6px; }
+.read-why p { margin-bottom: 8px; }
