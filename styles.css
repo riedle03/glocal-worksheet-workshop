@@ -718,3 +718,7 @@ html, body { overflow-x: clip; }
 .board__note { margin: 12px 0 0; font-size: 14px; max-width: none; }
 .dep-table--order .dep-row { grid-template-columns: 120px 1fr 1.4fr; }
 @media (max-width: 900px) { .pair-fields { grid-template-columns: 1fr; } }
+
+.why-better { margin-top: 14px; }
+.why-better .h4 { margin-top: 0; }
+.why-better .redo dt { display: flex; align-items: center; gap: 10px; }
